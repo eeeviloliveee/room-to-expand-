@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testimonials — Room to Expand</title>
+<meta name="description" content="What people say about their Pantarei sessions with Sean in Berlin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:        #F4EDDF;
+  --paper-lift:   #FAF5EA;
+  --paper-deep:   #EBE1CE;
+  --sage:         #7E8C6B;
+  --sage-deep:    #56644A;
+  --sage-soft:    #AEBA9B;
+  --sage-wash:    #DDE3CF;
+  --clay:         #BC6B4A;
+  --clay-deep:    #9E5436;
+  --clay-soft:    #E3B79E;
+  --ink:          #2C2A22;
+  --ink-soft:     #4E4A3E;
+  --ink-mute:     #7C7565;
+  --ink-faint:    #A89F8C;
+  --line:         rgba(44,42,34,0.14);
+  --line-soft:    rgba(44,42,34,0.08);
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-body:    'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --measure: 64ch;
+  --shell: 1180px;
+  --ease: cubic-bezier(0.2,0.7,0.2,1);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:18px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+a{color:inherit;}
+img,svg{display:block;max-width:100%;}
+
+.display{
+  font-family:var(--font-display);
+  font-weight:400;
+  line-height:1.0;
+  letter-spacing:-0.015em;
+  margin:0;
+  text-wrap:balance;
+}
+h1.display{font-size:clamp(46px,8.2vw,104px);}
+h2.display{font-size:clamp(32px,4.6vw,56px);line-height:1.04;}
+.eyebrow{
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:13px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--clay-deep);
+  margin:0 0 22px;
+}
+p{max-width:var(--measure);text-wrap:pretty;}
+
+.shell{max-width:var(--shell);margin:0 auto;padding:0 28px;}
+section{position:relative;}
+.band{padding:clamp(72px,11vw,150px) 0;}
+.rule{height:1px;background:var(--line-soft);max-width:var(--shell);margin:0 auto;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-body);font-weight:600;font-size:16px;
+  padding:15px 28px;border-radius:999px;border:none;cursor:pointer;
+  text-decoration:none;line-height:1;white-space:nowrap;
+  transition:background .25s var(--ease), color .25s var(--ease), transform .15s var(--ease);
+}
+.btn-clay{background:var(--clay);color:var(--paper-lift);}
+.btn-clay:hover{background:var(--clay-deep);}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line);}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink);}
+.btn .arrow{font-family:var(--font-display);font-size:18px;transform:translateY(-1px);}
+
+/* header */
+.hdr{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--paper) 82%, transparent);
+  backdrop-filter:saturate(1.2) blur(10px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s var(--ease), background .3s var(--ease);
+}
+.hdr.scrolled{border-bottom-color:var(--line-soft);}
+.hdr-in{display:flex;align-items:center;gap:24px;height:74px;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand .mark{width:30px;height:30px;flex:none;}
+.brand .name{font-family:var(--font-display);font-weight:500;font-size:21px;letter-spacing:-0.01em;color:var(--ink);}
+.nav{display:flex;gap:6px;margin-left:auto;}
+.nav a{
+  font-size:15px;font-weight:500;color:var(--ink-soft);text-decoration:none;white-space:nowrap;
+  padding:9px 14px;border-radius:999px;transition:color .2s var(--ease), background .2s var(--ease);
+}
+.nav a:hover{color:var(--ink);background:var(--paper-deep);}
+.nav a.active{color:var(--ink);background:var(--paper-deep);}
+.hdr .btn{padding:11px 20px;font-size:15px;}
+@media(max-width:840px){
+  .nav{display:none;}
+  .hdr-in{gap:12px;}
+}
+
+/* page hero */
+.page-hero{padding:clamp(60px,10vw,120px) 0 clamp(48px,7vw,80px);}
+.page-hero h1{max-width:16ch;}
+.page-hero .lede{
+  font-size:clamp(19px,2.1vw,23px);line-height:1.6;
+  color:var(--ink-soft);max-width:38ch;text-wrap:pretty;
+  margin-top:28px;
+}
+
+/* testimonial cards */
+.test-list{display:flex;flex-direction:column;gap:28px;margin-top:clamp(48px,7vw,80px);}
+.test-card{
+  background:var(--paper-lift);
+  border:1px solid var(--line-soft);
+  border-radius:22px;
+  padding:clamp(32px,5vw,56px);
+  max-width:72ch;
+}
+.test-card blockquote{
+  font-family:var(--font-display);
+  font-size:clamp(18px,2vw,22px);
+  line-height:1.72;
+  color:var(--ink-soft);
+  margin:0 0 28px;
+  font-style:italic;
+}
+.test-card blockquote::before{
+  content:'\201C';
+  font-size:1.3em;
+  color:var(--clay-soft);
+  line-height:0;
+  vertical-align:-0.25em;
+  margin-right:2px;
+}
+.test-card blockquote::after{
+  content:'\201D';
+  font-size:1.3em;
+  color:var(--clay-soft);
+  line-height:0;
+  vertical-align:-0.25em;
+  margin-left:2px;
+}
+.test-card .attr{
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:16px;
+  color:var(--ink);
+  letter-spacing:0.02em;
+}
+.test-card .attr::before{content:'— ';}
+
+/* footer */
+.foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start;}
+.foot .brand .name{font-size:24px;}
+.foot .tagline{margin-top:14px;font-family:var(--font-display);font-style:italic;font-size:18px;color:var(--ink-mute);}
+.foot-links{display:flex;gap:32px;flex-wrap:wrap;}
+.foot-col h4{font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 12px;}
+.foot-col a{display:block;color:var(--ink-soft);text-decoration:none;font-size:15px;margin-bottom:8px;transition:color .2s var(--ease);}
+.foot-col a:hover{color:var(--clay-deep);}
+.foot-legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;line-height:1.6;color:var(--ink-mute);max-width:70ch;}
+.foot-fine{margin-top:18px;font-size:13px;color:var(--ink-faint);}
+
+@media(prefers-reduced-motion:no-preference){
+  .reveal.in{animation:rte-fadeup .7s var(--ease) both;}
+  @keyframes rte-fadeup{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a class="brand" href="index.html" aria-label="Room to Expand home">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path fill="#7E8C6B" d="M77.4,58.1c-6.3,12-21,21.5-35.6,20.5C27.1,77.6,12.5,66,7.7,52.3C2.9,38.6,7.9,22.7,19.4,13.7C30.9,4.8,48.8,2.8,62.1,9.7C75.4,16.6,84.1,32.4,83.4,44.5C82.7,56.6,72.5,65,77.4,58.1Z"/>
+        <g transform="translate(50 50) rotate(35) scale(0.4) translate(-50 -50)">
+          <path fill="#BC6B4A" d="M73.7,53.8c-6,12.6-20.5,20.9-35.1,19.1C24,71.1,9.4,59,6.3,45.5C3.2,31.8,11.5,16.7,24.7,9.6C37.9,2.4,56,3.2,66.8,11.3C77.6,19.4,81,34.8,79.6,45.5C78.1,56.2,71.6,62.3,73.7,53.8Z"/>
+        </g>
+      </svg>
+      <span class="name">Room to Expand</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#pantarei">What is Pantarei</a>
+      <a href="index.html#session">A session</a>
+      <a href="index.html#who">Who it's for</a>
+      <a href="index.html#about">About</a>
+      <a href="testimonials.html" class="active">Testimonials</a>
+    </nav>
+    <a class="btn btn-clay" href="index.html#book">Get in touch</a>
+  </div>
+</header>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="shell">
+    <p class="eyebrow">In their own words</p>
+    <h1 class="display">What people say</h1>
+    <p class="lede">Experiences shared by people who have had sessions with Sean.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="band">
+  <div class="shell">
+    <div class="test-list">
+
+      <article class="test-card reveal">
+        <blockquote>My Pantarei sessions with Sean have been a soft and supportive space for connecting with my emotions on a deeper level. Creating space to really feel what is happening in my body has been very meaningful for me. When I don't fully understand what I'm feeling or find myself stuck, I usually turn to non-verbal practices like dance, breathwork, or movement. Working with Sean offered something different, a gentle way to begin putting feelings I couldn't fully grasp into words. Through his thoughtful questions, what felt unclear started to take shape and expressing them was really relieving and liberating. I'm grateful for the way he creates a space of empathy and non-judgment, allowing a genuine sense of exploration to unfold. It felt like a space where I can truly be myself, where crying, laughing, and all feelings were welcome.</blockquote>
+        <p class="attr">Merve</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-top">
+      <div>
+        <a class="brand" href="index.html">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" style="width:30px;height:30px;">
+            <path fill="#7E8C6B" d="M77.4,58.1c-6.3,12-21,21.5-35.6,20.5C27.1,77.6,12.5,66,7.7,52.3C2.9,38.6,7.9,22.7,19.4,13.7C30.9,4.8,48.8,2.8,62.1,9.7C75.4,16.6,84.1,32.4,83.4,44.5C82.7,56.6,72.5,65,77.4,58.1Z"/>
+            <g transform="translate(50 50) rotate(35) scale(0.4) translate(-50 -50)">
+              <path fill="#BC6B4A" d="M73.7,53.8c-6,12.6-20.5,20.9-35.1,19.1C24,71.1,9.4,59,6.3,45.5C3.2,31.8,11.5,16.7,24.7,9.6C37.9,2.4,56,3.2,66.8,11.3C77.6,19.4,81,34.8,79.6,45.5C78.1,56.2,71.6,62.3,73.7,53.8Z"/>
+            </g>
+          </svg>
+          <span class="name">Room to Expand</span>
+        </a>
+        <p class="tagline">Pantarei Approach Bodywork, Berlin</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Follow</h4>
+          <a href="https://www.instagram.com/roomtoexpand" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="foot-col">
+          <h4>Begin</h4>
+          <a href="index.html#book">Book a session</a>
+          <a href="mailto:seanpauldenny@gmail.com">Email Sean</a>
+          <a href="index.html#pantarei">What is Pantarei</a>
+          <a href="testimonials.html">Testimonials</a>
+        </div>
+      </div>
+    </div>
+    <p class="foot-legal">Sean is a student practitioner of the Pantarei Approach. Sessions are not medical or psychiatric treatment.</p>
+    <p class="foot-fine">© 2026 Room to Expand · Berlin</p>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 12);
+onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+(function(){
+  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+  const vh = () => window.innerHeight || document.documentElement.clientHeight;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (el.getBoundingClientRect().top > vh() * 0.92) io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

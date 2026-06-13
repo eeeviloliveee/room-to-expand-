@@ -292,6 +292,15 @@ section{position:relative;}
 .foot-legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;line-height:1.6;color:var(--ink-mute);max-width:70ch;}
 .foot-fine{margin-top:18px;font-size:13px;color:var(--ink-faint);}
 
+/* ---------- testimonial pull ---------- */
+.tquote{
+  font-family:var(--font-display);font-weight:400;font-style:italic;
+  font-size:clamp(26px,3.8vw,48px);line-height:1.18;letter-spacing:-0.01em;
+  color:var(--sage-deep);max-width:28ch;margin:0;text-wrap:balance;
+}
+.tquote-attr{margin-top:20px;font-family:var(--font-body);font-size:15px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);}
+.tquote-link{margin-top:34px;}
+
 /* ---------- reveal ---------- */
 /* Default = visible (safe for print, no-JS, static capture).
    Below-fold elements animate FROM hidden only when scrolled into view. */
@@ -320,6 +329,7 @@ section{position:relative;}
       <a href="#session">A session</a>
       <a href="#who">Who it's for</a>
       <a href="#about">About</a>
+      <a href="testimonials.html">Testimonials</a>
     </nav>
     <a class="btn btn-clay" href="#book">Get in touch</a>
   </div>
@@ -425,6 +435,18 @@ section{position:relative;}
 
 <div class="rule"></div>
 
+<!-- ===================== TESTIMONIAL PULL ===================== -->
+<section class="band">
+  <div class="shell">
+    <p class="eyebrow reveal">What people say</p>
+    <blockquote class="tquote reveal">"It felt like a space where I can truly be myself, where crying, laughing, and all feelings were welcome."</blockquote>
+    <p class="tquote-attr reveal">— Merve</p>
+    <div class="tquote-link reveal"><a class="btn btn-ghost" href="testimonials.html">Read the full testimonial <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
 <!-- ===================== WHO IS IT FOR ===================== -->
 <section class="band" id="who">
   <div class="shell two">
@@ -522,6 +544,7 @@ section{position:relative;}
           <a href="#book">Book a session</a>
           <a href="mailto:seanpauldenny@gmail.com">Email Sean</a>
           <a href="#pantarei">What is Pantarei</a>
+          <a href="testimonials.html">Testimonials</a>
         </div>
       </div>
     </div>
