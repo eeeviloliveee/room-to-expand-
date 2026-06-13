@@ -257,6 +257,19 @@ section{position:relative;}
 .band-clay .prose strong{color:var(--paper-lift);}
 .cta-meta{margin-top:26px;font-size:15px;letter-spacing:0.02em;color:rgba(250,245,234,0.85);display:flex;align-items:center;gap:10px;}
 .cta-meta .dot{width:6px;height:6px;border-radius:50%;background:rgba(250,245,234,0.6);}
+.cta-inline-quote{
+  margin-top:40px;padding-top:32px;
+  border-top:1px solid rgba(250,245,234,0.2);
+  font-family:var(--font-display);font-style:italic;
+  font-size:clamp(18px,2vw,22px);line-height:1.5;
+  color:rgba(250,245,234,0.85);max-width:42ch;
+}
+.cta-inline-quote .attr{
+  display:block;margin-top:12px;
+  font-family:var(--font-body);font-style:normal;
+  font-size:14px;letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(250,245,234,0.55);
+}
 
 .book-card{
   margin-top:clamp(40px,6vw,64px);
@@ -494,6 +507,7 @@ section{position:relative;}
         <p>I am looking for people in Berlin who are open to experiencing a Pantarei session as I continue my training. <strong>Sessions are free.</strong> I am also open to trades.</p>
       </div>
       <div class="cta-meta reveal"><span class="dot"></span> In person, Berlin only.</div>
+      <p class="cta-inline-quote reveal">"I always feel safe to express and explore whatever comes up — it felt both safe and freeing."<span class="attr">— Savita</span></p>
     </div>
 
     <div class="book-card reveal">
