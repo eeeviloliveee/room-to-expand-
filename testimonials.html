@@ -108,10 +108,49 @@ section{position:relative;}
 }
 .nav a:hover{color:var(--ink);background:var(--paper-deep);}
 .nav a.active{color:var(--ink);background:var(--paper-deep);}
+.nav .nav-cta{display:none;}
 .hdr .btn{padding:11px 20px;font-size:15px;}
+
+/* hamburger toggle — hidden on desktop */
+.nav-toggle{
+  display:none;margin-left:12px;flex:none;
+  width:44px;height:44px;padding:0;border:none;cursor:pointer;
+  background:transparent;align-items:center;justify-content:center;
+}
+.nav-toggle .bars{position:relative;width:22px;height:14px;}
+.nav-toggle .bars span{
+  position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:var(--ink);
+  transition:transform .3s var(--ease), opacity .2s var(--ease), top .3s var(--ease);
+}
+.nav-toggle .bars span:nth-child(1){top:0;}
+.nav-toggle .bars span:nth-child(2){top:6px;}
+.nav-toggle .bars span:nth-child(3){top:12px;}
+.nav-toggle[aria-expanded="true"] .bars span:nth-child(1){top:6px;transform:rotate(45deg);}
+.nav-toggle[aria-expanded="true"] .bars span:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] .bars span:nth-child(3){top:6px;transform:rotate(-45deg);}
+
 @media(max-width:840px){
-  .nav{display:none;}
   .hdr-in{gap:12px;}
+  .hdr-cta{display:none;}
+  .nav-toggle{display:inline-flex;}
+  .nav{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;gap:4px;margin-left:0;
+    background:var(--paper-lift);
+    border-bottom:1px solid var(--line-soft);
+    box-shadow:0 22px 44px rgba(44,42,34,0.13);
+    padding:12px;
+    max-height:0;overflow:hidden;
+    opacity:0;visibility:hidden;
+    transition:max-height .32s var(--ease), opacity .24s var(--ease), visibility .24s var(--ease);
+  }
+  .nav.open{max-height:80vh;opacity:1;visibility:visible;overflow:auto;}
+  .nav a{font-size:17px;padding:14px 16px;border-radius:12px;}
+  .nav .nav-cta{
+    display:inline-flex;justify-content:center;margin-top:6px;
+    color:var(--paper-lift);font-size:16px;
+  }
+  .nav .nav-cta:hover{background:var(--clay-deep);color:var(--paper-lift);}
 }
 
 /* page hero */
@@ -197,14 +236,18 @@ section{position:relative;}
       </svg>
       <span class="name">Room to Expand</span>
     </a>
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <a href="index.html#pantarei">What is Pantarei</a>
       <a href="index.html#session">A session</a>
       <a href="index.html#who">Who it's for</a>
       <a href="index.html#about">About</a>
       <a href="testimonials.html" class="active">Testimonials</a>
+      <a class="btn btn-clay nav-cta" href="index.html#book">Get in touch</a>
     </nav>
-    <a class="btn btn-clay" href="index.html#book">Get in touch</a>
+    <a class="btn btn-clay hdr-cta" href="index.html#book">Get in touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </header>
 
@@ -282,6 +325,18 @@ section{position:relative;}
 const hdr = document.getElementById('hdr');
 const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 12);
 onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+// mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const nav = document.getElementById('nav');
+const setNav = (open) => {
+  nav.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+};
+navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
 
 (function(){
   if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
