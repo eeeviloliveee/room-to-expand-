@@ -3,14 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Room to Expand — Pantarei Bodywork Sessions in Berlin</title>
-<meta name="description" content="Free somatic bodywork sessions in Berlin. Student of the Pantarei Approach looking for curious people to practice with. No experience needed.">
-<meta property="og:title" content="Room to Expand — Pantarei Bodywork Sessions in Berlin">
-<meta property="og:description" content="Free somatic bodywork sessions in Berlin. Student of the Pantarei Approach looking for curious people to practice with. No experience needed.">
+<title>Pantarei Somatic Bodywork Berlin | Room to Expand</title>
+<meta name="description" content="Somatic bodywork sessions in Neukölln, Berlin with Sean Paul Denny, Pantarei student practitioner. Conversation and touch, explained in plain language. For the curious, not the convinced.">
+<meta property="og:title" content="Pantarei Somatic Bodywork Berlin | Room to Expand">
+<meta property="og:description" content="Somatic bodywork sessions in Neukölln, Berlin with Sean Paul Denny, Pantarei student practitioner. Conversation and touch, explained in plain language. For the curious, not the convinced.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://roomtoexpand.me/#business",
+      "name": "Room to Expand",
+      "alternateName": "Room to Expand Berlin",
+      "description": "Room to Expand is Sean Paul Denny's Pantarei somatic bodywork practice in Berlin. Sessions combine conversation and touch, offered in plain language for the curious, not the convinced.",
+      "url": "https://roomtoexpand.me",
+      "founder": { "@id": "https://roomtoexpand.me/#sean" },
+      "employee": { "@id": "https://roomtoexpand.me/#sean" },
+      "knowsAbout": ["Pantarei Approach", "somatic bodywork", "embodiment"],
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "12047",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": { "@type": "City", "name": "Berlin" },
+      "email": "seanpauldenny@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/roomtoexpand"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://roomtoexpand.me/#sean",
+      "name": "Sean Paul Denny",
+      "jobTitle": "Pantarei somatic bodywork student practitioner",
+      "description": "Sean Paul Denny is a student practitioner of the Pantarei Approach based in Berlin, and the founder of Room to Expand. He spent twenty years in the games industry before training in somatic bodywork.",
+      "worksFor": { "@id": "https://roomtoexpand.me/#business" },
+      "homeLocation": { "@type": "City", "name": "Berlin" },
+      "knowsLanguage": ["en"],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Pantarei Approach School",
+        "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" }
+      },
+      "sameAs": [
+        "https://www.instagram.com/roomtoexpand"
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
 /* ============================================================
    Room to Expand — Student practice site
@@ -67,6 +116,12 @@ body{
 }
 a{color:inherit;}
 img,svg{display:block;max-width:100%;}
+
+/* visually-hidden (screen-reader / crawler only) */
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
 
 /* ---------- type ---------- */
 .display{
@@ -131,13 +186,13 @@ section{position:relative;}
 }
 .hdr.scrolled{border-bottom-color:var(--line-soft);}
 .hdr-in{display:flex;align-items:center;gap:24px;height:74px;}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none;}
 .brand .mark{width:30px;height:30px;flex:none;}
-.brand .name{font-family:var(--font-display);font-weight:500;font-size:21px;letter-spacing:-0.01em;color:var(--ink);}
-.nav{display:flex;gap:6px;margin-left:auto;}
+.brand .name{font-family:var(--font-display);font-weight:500;font-size:21px;letter-spacing:-0.01em;color:var(--ink);white-space:nowrap;}
+.nav{display:flex;gap:3px;margin-left:auto;}
 .nav a{
   font-size:15px;font-weight:500;color:var(--ink-soft);text-decoration:none;white-space:nowrap;
-  padding:9px 14px;border-radius:999px;transition:color .2s var(--ease), background .2s var(--ease);
+  padding:9px 11px;border-radius:999px;transition:color .2s var(--ease), background .2s var(--ease);
 }
 .nav a:hover{color:var(--ink);background:var(--paper-deep);}
 .nav .nav-cta{display:none;}
@@ -161,7 +216,7 @@ section{position:relative;}
 .nav-toggle[aria-expanded="true"] .bars span:nth-child(2){opacity:0;}
 .nav-toggle[aria-expanded="true"] .bars span:nth-child(3){top:6px;transform:rotate(-45deg);}
 
-@media(max-width:840px){
+@media(max-width:1080px){
   .hdr-in{gap:12px;}
   .hdr-cta{display:none;}
   .nav-toggle{display:inline-flex;}
@@ -205,6 +260,7 @@ section{position:relative;}
 .hero{padding:clamp(70px,12vw,140px) 0 clamp(64px,9vw,120px);overflow:hidden;}
 .hero .shell{position:relative;z-index:2;}
 .hero h1{max-width:14ch;}
+.hero .hero-title{font-size:clamp(46px,8.2vw,104px);max-width:14ch;}
 .hero .lede{margin-top:34px;}
 .hero .prose{margin-top:30px;}
 .hero .prose p{font-size:19px;max-width:46ch;}
@@ -379,11 +435,13 @@ section{position:relative;}
       <span class="name">Room to Expand</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="#pantarei">What is Pantarei</a>
-      <a href="#session">A session</a>
+      <a href="what-is-pantarei.html">What is Pantarei</a>
+      <a href="sessions.html">A session</a>
       <a href="#who">Who it's for</a>
       <a href="#about">About</a>
+      <a href="faq.html">FAQ</a>
       <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
       <a class="btn btn-clay nav-cta" href="#book">Get in touch</a>
     </nav>
     <a class="btn btn-clay hdr-cta" href="#book">Get in touch</a>
@@ -416,8 +474,9 @@ section{position:relative;}
     <svg class="b b2" viewBox="0 0 600 600"><path fill="#E3B79E" d="M442.3,322.7C406.4,398.1,318.9,449.6,231.4,438.8C143.9,428,56.4,354.8,37.7,272.9C19.0,191,69.1,100.4,148.3,57.4C227.5,14.5,335.8,19.2,400.6,67.7C465.4,116.2,486.7,208.5,477.7,272.9C468.8,337.2,429.6,373.6,442.3,322.7Z"/></svg>
   </div>
   <div class="shell">
+    <h1 class="sr-only">Room to Expand: Pantarei somatic bodywork in Berlin</h1>
     <p class="eyebrow">Pantarei Approach Bodywork · Berlin</p>
-    <h1 class="display">For the curious.<br>Not the convinced.</h1>
+    <p class="display hero-title">For the curious.<br>Not the convinced.</p>
     <div class="prose">
       <p>You don't need to believe in this. You don't need to have the right words for what you're carrying, or know what you're looking for, or feel ready in any particular way.</p>
       <p>You just need a spark of curiosity. That's enough to begin.</p>
@@ -646,15 +705,21 @@ section{position:relative;}
       </div>
       <div class="foot-links">
         <div class="foot-col">
-          <h4>Follow</h4>
-          <a href="https://www.instagram.com/roomtoexpand" target="_blank" rel="noopener">Instagram</a>
+          <h4>Explore</h4>
+          <a href="what-is-pantarei.html">What is Pantarei</a>
+          <a href="sessions.html">What to expect</a>
+          <a href="faq.html">FAQ</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
         </div>
         <div class="foot-col">
           <h4>Begin</h4>
           <a href="#book">Book a session</a>
           <a href="mailto:seanpauldenny@gmail.com">Email Sean</a>
-          <a href="#pantarei">What is Pantarei</a>
-          <a href="testimonials.html">Testimonials</a>
+        </div>
+        <div class="foot-col">
+          <h4>Follow</h4>
+          <a href="https://www.instagram.com/roomtoexpand" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </div>

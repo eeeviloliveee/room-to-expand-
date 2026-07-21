@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Testimonials | Room to Expand</title>
-<meta name="description" content="What people say about their Pantarei sessions with Sean in Berlin.">
+<title>What to Expect in a Pantarei Session | Berlin, Neukölln</title>
+<meta name="description" content="How a Pantarei somatic bodywork session works, start to finish, in Neukölln, Berlin near Schönleinstraße. Sessions in English with student practitioner Sean Paul Denny.">
+<meta property="og:title" content="What to Expect in a Pantarei Session | Berlin, Neukölln">
+<meta property="og:description" content="How a Pantarei somatic bodywork session works, start to finish, in Neukölln, Berlin near Schönleinstraße. Sessions in English with student practitioner Sean Paul Denny.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -106,8 +109,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(46px,8.2vw,104px);}
-h2.display{font-size:clamp(32px,4.6vw,56px);line-height:1.04;}
+h1.display{font-size:clamp(40px,6.2vw,72px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -121,7 +123,7 @@ p{max-width:var(--measure);text-wrap:pretty;}
 
 .shell{max-width:var(--shell);margin:0 auto;padding:0 28px;}
 section{position:relative;}
-.band{padding:clamp(72px,11vw,150px) 0;}
+.band{padding:clamp(48px,6vw,88px) 0;}
 .rule{height:1px;background:var(--line-soft);max-width:var(--shell);margin:0 auto;}
 
 .btn{
@@ -204,54 +206,30 @@ section{position:relative;}
 
 /* page hero */
 .page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:16ch;}
+.page-hero h1{max-width:20ch;}
 .page-hero .lede{
   font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:38ch;text-wrap:pretty;
+  color:var(--ink-soft);max-width:52ch;text-wrap:pretty;
   margin-top:28px;
 }
 
-/* testimonial cards */
-.test-list{display:flex;flex-direction:column;gap:28px;margin-top:0;}
-.test-card{
-  background:var(--paper-lift);
-  border:1px solid var(--line-soft);
-  border-radius:22px;
-  padding:clamp(32px,5vw,56px);
-  max-width:72ch;
+/* article content */
+.content{max-width:72ch;}
+.content .intro{font-size:clamp(19px,2vw,21px);color:var(--ink-soft);margin:0 0 1.1em;}
+.content p{margin:0 0 1.25em;color:var(--ink-soft);}
+.content h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:1.9em 0 .5em;letter-spacing:-0.01em;
 }
-.test-card blockquote{
-  font-family:var(--font-display);
-  font-size:clamp(18px,2vw,22px);
-  line-height:1.72;
-  color:var(--ink-soft);
-  margin:0 0 28px;
-  font-style:italic;
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+.content .signoff{
+  margin-top:2.6em;padding-top:1.6em;border-top:1px solid var(--line-soft);
+  font-style:italic;color:var(--ink-mute);font-size:16px;
 }
-.test-card blockquote::before{
-  content:'\201C';
-  font-size:1.3em;
-  color:var(--clay-soft);
-  line-height:0;
-  vertical-align:-0.25em;
-  margin-right:2px;
-}
-.test-card blockquote::after{
-  content:'\201D';
-  font-size:1.3em;
-  color:var(--clay-soft);
-  line-height:0;
-  vertical-align:-0.25em;
-  margin-left:2px;
-}
-.test-card .attr{
-  font-family:var(--font-body);
-  font-weight:600;
-  font-size:16px;
-  color:var(--ink);
-  letter-spacing:0.02em;
-}
-.test-card .attr::before{content:'';}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -287,11 +265,11 @@ section{position:relative;}
     </a>
     <nav class="nav" id="nav">
       <a href="what-is-pantarei.html">What is Pantarei</a>
-      <a href="sessions.html">A session</a>
+      <a href="sessions.html" class="active">A session</a>
       <a href="index.html#who">Who it's for</a>
       <a href="index.html#about">About</a>
       <a href="faq.html">FAQ</a>
-      <a href="testimonials.html" class="active">Testimonials</a>
+      <a href="testimonials.html">Testimonials</a>
       <a href="blog.html">Blog</a>
       <a class="btn btn-clay nav-cta" href="index.html#book">Get in touch</a>
     </nav>
@@ -305,34 +283,37 @@ section{position:relative;}
 <!-- ===================== PAGE HERO ===================== -->
 <section class="page-hero">
   <div class="shell">
-    <p class="eyebrow">In their own words</p>
-    <h1 class="display">What people say</h1>
-    <p class="lede">Experiences shared by people who have had sessions with Sean.</p>
+    <p class="eyebrow">What happens, start to finish</p>
+    <h1 class="display">What to expect in a session</h1>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== TESTIMONIALS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="test-list">
+    <div class="content">
+      <p class="intro">A Pantarei somatic bodywork session at Room to Expand runs about an hour and has two parts that blend into each other: conversation and hands-on work. Here is the whole thing, start to finish, so nothing is a surprise.</p>
 
-      <article class="test-card reveal">
-        <blockquote>My Pantarei sessions with Sean have been a soft and supportive space for connecting with my emotions on a deeper level. Creating space to really feel what is happening in my body has been very meaningful for me. When I don't fully understand what I'm feeling or find myself stuck, I usually turn to non-verbal practices like dance, breathwork, or movement. Working with Sean offered something different, a gentle way to begin putting feelings I couldn't fully grasp into words. Through his thoughtful questions, what felt unclear started to take shape and expressing them was really relieving and liberating. I'm grateful for the way he creates a space of empathy and non-judgment, allowing a genuine sense of exploration to unfold. It felt like a space where I can truly be myself, where crying, laughing, and all feelings were welcome.</blockquote>
-        <p class="attr">Merve</p>
-      </article>
+      <h2>Before you arrive</h2>
+      <p>Nothing to prepare. Wear something comfortable. You do not need to know exactly what you want to work on; "I have no idea, I'm just curious" is a legitimate starting point and a fairly common one.</p>
 
-      <article class="test-card reveal">
-        <blockquote>Sean holds space in a really special way, with a presence that's grounded and calming. I always feel safe to express and explore whatever comes up, and the way they check in for consent throughout a session makes it easy to trust the process. They have a real gift for deeply listening and asking thought provoking questions (not steering you anywhere, just gently opening up angles you hadn't considered so you can come to your own realizations). In my session, I was able to let some really intense emotions move through me, and it felt both safe and freeing. I can't recommend Sean's Pantarei bodywork enough.</blockquote>
-        <p class="attr">Savita</p>
-      </article>
+      <h2>The conversation</h2>
+      <p>We start sitting across from each other, talking. Not an intake form, an actual conversation. What is present for you right now, what keeps repeating, what you would like to be different. My job in this part is to listen well and to be honest with you, not to nod along.</p>
 
-      <article class="test-card reveal">
-        <blockquote>I've had a couple of sessions with Sean, and each time the experience has been remarkable. He creates a space where it feels safe to open up, even when it's difficult. It's fascinating to notice how the body reflects emotions. His guidance, combined with contact to the body area involved, helps calm the nervous system and brings relief. Sean asks the right questions, truly listens, and his gentle, understanding tone makes each session feel both supportive and grounded. I can definitely say, that Sean's practice of the Panterai approach works, and his sessions are effective while remaining deeply respectful of your experience.</blockquote>
-        <p class="attr">Ana</p>
-      </article>
+      <h2>The bodywork</h2>
+      <p>Then you lie down on a bodywork table, fully clothed, and I work with touch while the conversation continues. The touch varies: sometimes still, sometimes moving, sometimes just a hand resting where you happen to hold your entire week. It is not massage and nothing needs to be endured. If anything is uncomfortable, you say so and it changes. You are a participant the whole way through, not a patient.</p>
 
+      <h2>After</h2>
+      <p>Most people want a few quiet minutes before heading back out. Some things land immediately, some show up two days later in the middle of something unrelated. Both are normal.</p>
+
+      <h2>Working with a student practitioner</h2>
+      <p>I am a student practitioner of the Pantarei Approach, which means I am completing the professional training at the school here in Berlin, where the method was founded in 2016. Student practitioners give real, full sessions within the school's training framework as part of certification. What that means for you, practically: you receive a complete session, you know exactly where I am in my training, and you are working with someone whose recent training is very fresh and whose attention is very whole.</p>
+      <p>A note on what I am not: I am not a therapist or a doctor, and sessions do not diagnose or treat any medical or psychological condition. If that is what you need, that care comes first, and this work can exist alongside it.</p>
+
+      <h2>Practical details</h2>
+      <p>Sessions take place in Neukölln, Berlin, near Schönleinstraße. Sessions are in English. To arrange a session or ask a question first, <a href="index.html#book">get in touch</a>. A short exchange before booking is welcome; it is useful for both of us to sense whether this is a fit.</p>
     </div>
   </div>
 </section>
@@ -361,7 +342,6 @@ section{position:relative;}
           <a href="faq.html">FAQ</a>
           <a href="testimonials.html">Testimonials</a>
           <a href="blog.html">Blog</a>
-      <a href="blog.html">Blog</a>
         </div>
         <div class="foot-col">
           <h4>Begin</h4>

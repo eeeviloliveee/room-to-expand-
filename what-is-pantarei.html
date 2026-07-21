@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Testimonials | Room to Expand</title>
-<meta name="description" content="What people say about their Pantarei sessions with Sean in Berlin.">
+<title>What Is the Pantarei Approach? A Plain-Language Guide</title>
+<meta name="description" content="The Pantarei Approach is a somatic bodywork method founded in Berlin in 2016. Here is what it actually is, what it is not, and what happens in a session. Written for skeptics.">
+<meta property="og:title" content="What Is the Pantarei Approach? A Plain-Language Guide">
+<meta property="og:description" content="The Pantarei Approach is a somatic bodywork method founded in Berlin in 2016. Here is what it actually is, what it is not, and what happens in a session. Written for skeptics.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -106,8 +109,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(46px,8.2vw,104px);}
-h2.display{font-size:clamp(32px,4.6vw,56px);line-height:1.04;}
+h1.display{font-size:clamp(40px,6.2vw,72px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -121,7 +123,7 @@ p{max-width:var(--measure);text-wrap:pretty;}
 
 .shell{max-width:var(--shell);margin:0 auto;padding:0 28px;}
 section{position:relative;}
-.band{padding:clamp(72px,11vw,150px) 0;}
+.band{padding:clamp(48px,6vw,88px) 0;}
 .rule{height:1px;background:var(--line-soft);max-width:var(--shell);margin:0 auto;}
 
 .btn{
@@ -204,54 +206,30 @@ section{position:relative;}
 
 /* page hero */
 .page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:16ch;}
+.page-hero h1{max-width:20ch;}
 .page-hero .lede{
   font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:38ch;text-wrap:pretty;
+  color:var(--ink-soft);max-width:52ch;text-wrap:pretty;
   margin-top:28px;
 }
 
-/* testimonial cards */
-.test-list{display:flex;flex-direction:column;gap:28px;margin-top:0;}
-.test-card{
-  background:var(--paper-lift);
-  border:1px solid var(--line-soft);
-  border-radius:22px;
-  padding:clamp(32px,5vw,56px);
-  max-width:72ch;
+/* article content */
+.content{max-width:72ch;}
+.content .intro{font-size:clamp(19px,2vw,21px);color:var(--ink-soft);margin:0 0 1.1em;}
+.content p{margin:0 0 1.25em;color:var(--ink-soft);}
+.content h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:1.9em 0 .5em;letter-spacing:-0.01em;
 }
-.test-card blockquote{
-  font-family:var(--font-display);
-  font-size:clamp(18px,2vw,22px);
-  line-height:1.72;
-  color:var(--ink-soft);
-  margin:0 0 28px;
-  font-style:italic;
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+.content .signoff{
+  margin-top:2.6em;padding-top:1.6em;border-top:1px solid var(--line-soft);
+  font-style:italic;color:var(--ink-mute);font-size:16px;
 }
-.test-card blockquote::before{
-  content:'\201C';
-  font-size:1.3em;
-  color:var(--clay-soft);
-  line-height:0;
-  vertical-align:-0.25em;
-  margin-right:2px;
-}
-.test-card blockquote::after{
-  content:'\201D';
-  font-size:1.3em;
-  color:var(--clay-soft);
-  line-height:0;
-  vertical-align:-0.25em;
-  margin-left:2px;
-}
-.test-card .attr{
-  font-family:var(--font-body);
-  font-weight:600;
-  font-size:16px;
-  color:var(--ink);
-  letter-spacing:0.02em;
-}
-.test-card .attr::before{content:'';}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -286,12 +264,12 @@ section{position:relative;}
       <span class="name">Room to Expand</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="what-is-pantarei.html">What is Pantarei</a>
+      <a href="what-is-pantarei.html" class="active">What is Pantarei</a>
       <a href="sessions.html">A session</a>
       <a href="index.html#who">Who it's for</a>
       <a href="index.html#about">About</a>
       <a href="faq.html">FAQ</a>
-      <a href="testimonials.html" class="active">Testimonials</a>
+      <a href="testimonials.html">Testimonials</a>
       <a href="blog.html">Blog</a>
       <a class="btn btn-clay nav-cta" href="index.html#book">Get in touch</a>
     </nav>
@@ -305,34 +283,35 @@ section{position:relative;}
 <!-- ===================== PAGE HERO ===================== -->
 <section class="page-hero">
   <div class="shell">
-    <p class="eyebrow">In their own words</p>
-    <h1 class="display">What people say</h1>
-    <p class="lede">Experiences shared by people who have had sessions with Sean.</p>
+    <p class="eyebrow">A plain-language guide</p>
+    <h1 class="display">What is the Pantarei Approach?</h1>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== TESTIMONIALS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="test-list">
+    <div class="content">
+      <p class="intro">The Pantarei Approach is a somatic bodywork method founded in Berlin in 2016 by Vered Manasse and Claudia Glowik. A session combines two things that usually live in separate rooms: conversation and touch. You talk about something real in your life, and the practitioner uses hands-on touch to help you notice how that thing actually shows up in your body. The name comes from the Greek phrase panta rhei, everything flows. The idea behind the name is simple: people are not fixed, and change is always available.</p>
+      <p>That is the whole method in one paragraph. The rest of this page is detail.</p>
 
-      <article class="test-card reveal">
-        <blockquote>My Pantarei sessions with Sean have been a soft and supportive space for connecting with my emotions on a deeper level. Creating space to really feel what is happening in my body has been very meaningful for me. When I don't fully understand what I'm feeling or find myself stuck, I usually turn to non-verbal practices like dance, breathwork, or movement. Working with Sean offered something different, a gentle way to begin putting feelings I couldn't fully grasp into words. Through his thoughtful questions, what felt unclear started to take shape and expressing them was really relieving and liberating. I'm grateful for the way he creates a space of empathy and non-judgment, allowing a genuine sense of exploration to unfold. It felt like a space where I can truly be myself, where crying, laughing, and all feelings were welcome.</blockquote>
-        <p class="attr">Merve</p>
-      </article>
+      <h2>Where it comes from</h2>
+      <p>The founders were long-time practitioners of the Grinberg Method, a body-based teaching approach, before developing Pantarei as its own school. The school is based in Berlin and has certified practitioners who now work in many countries. Berlin is the method's home city, which is part of why you will find more Pantarei practitioners here than anywhere else.</p>
 
-      <article class="test-card reveal">
-        <blockquote>Sean holds space in a really special way, with a presence that's grounded and calming. I always feel safe to express and explore whatever comes up, and the way they check in for consent throughout a session makes it easy to trust the process. They have a real gift for deeply listening and asking thought provoking questions (not steering you anywhere, just gently opening up angles you hadn't considered so you can come to your own realizations). In my session, I was able to let some really intense emotions move through me, and it felt both safe and freeing. I can't recommend Sean's Pantarei bodywork enough.</blockquote>
-        <p class="attr">Savita</p>
-      </article>
+      <h2>What a session is actually like</h2>
+      <p>You arrive, you sit down, and you talk about what you want to look at. Not your childhood by default, not your dreams. Something current: a decision you keep postponing, a tension you carry into every meeting, a feeling you can name but not locate. Then you lie down on a bodywork table, fully clothed, and the practitioner works with touch while the conversation continues. The touch is not massage. It is closer to being pointed at: here, this is where you hold that. Sessions usually run around an hour.</p>
 
-      <article class="test-card reveal">
-        <blockquote>I've had a couple of sessions with Sean, and each time the experience has been remarkable. He creates a space where it feels safe to open up, even when it's difficult. It's fascinating to notice how the body reflects emotions. His guidance, combined with contact to the body area involved, helps calm the nervous system and brings relief. Sean asks the right questions, truly listens, and his gentle, understanding tone makes each session feel both supportive and grounded. I can definitely say, that Sean's practice of the Panterai approach works, and his sessions are effective while remaining deeply respectful of your experience.</blockquote>
-        <p class="attr">Ana</p>
-      </article>
+      <h2>What it is not</h2>
+      <p>Pantarei is not therapy, and I will never present it as a substitute for one. Sessions do not diagnose anything and do not treat any medical or psychological condition. If you are dealing with a health issue, a doctor or licensed therapist is the right first stop. Plenty of people have sessions alongside that kind of care, and the two do not compete.</p>
+      <p>It is also not energy work. There is no talk of fields, chakras, or anything you would need to take on faith. The working assumption is ordinary and fairly hard to argue with: your body is involved in everything you experience, and paying attention to it gives you information you do not get by thinking alone.</p>
 
+      <h2>Who tends to get something out of it</h2>
+      <p>People in the middle of a transition. People whose work lives entirely in their head and who have started to notice the cost of that. People who have done talk-based work and hit the limit of what more talking adds. And people who are simply curious what it is like to be listened to by hand.</p>
+      <p>If you recognize yourself in that last sentence and are still a bit skeptical, good. This practice is built for the curious, not the convinced.</p>
+
+      <p class="signoff">Sean Paul Denny is a student practitioner of the Pantarei Approach in Berlin and the founder of Room to Expand. Sessions take place in Neukölln, Berlin. <a href="sessions.html">Read what to expect in a session</a> or <a href="index.html#book">get in touch</a>.</p>
     </div>
   </div>
 </section>
@@ -361,7 +340,6 @@ section{position:relative;}
           <a href="faq.html">FAQ</a>
           <a href="testimonials.html">Testimonials</a>
           <a href="blog.html">Blog</a>
-      <a href="blog.html">Blog</a>
         </div>
         <div class="foot-col">
           <h4>Begin</h4>

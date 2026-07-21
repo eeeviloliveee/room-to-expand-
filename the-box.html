@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Testimonials | Room to Expand</title>
-<meta name="description" content="What people say about their Pantarei sessions with Sean in Berlin.">
+<title>The Box: Finding Room to Take Up Space | Room to Expand</title>
+<meta name="description" content="A personal story about anxiety, a box, and how Pantarei somatic bodywork in Berlin helped me learn to take up space. For the curious, not the convinced.">
+<meta property="og:title" content="The Box: Finding Room to Take Up Space">
+<meta property="og:description" content="A personal story about anxiety, a box, and how Pantarei somatic bodywork in Berlin helped me learn to take up space. For the curious, not the convinced.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,6 +55,17 @@
       "sameAs": [
         "https://www.instagram.com/roomtoexpand"
       ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://roomtoexpand.me/the-box#post",
+      "headline": "The Box",
+      "description": "A personal story about anxiety, a box, and how Pantarei somatic bodywork in Berlin helped me learn to take up space.",
+      "datePublished": "2026-07-21",
+      "inLanguage": "en",
+      "author": { "@id": "https://roomtoexpand.me/#sean" },
+      "publisher": { "@id": "https://roomtoexpand.me/#business" },
+      "mainEntityOfPage": "https://roomtoexpand.me/the-box"
     }
   ]
 }
@@ -106,8 +120,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(46px,8.2vw,104px);}
-h2.display{font-size:clamp(32px,4.6vw,56px);line-height:1.04;}
+h1.display{font-size:clamp(44px,7vw,84px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -121,7 +134,7 @@ p{max-width:var(--measure);text-wrap:pretty;}
 
 .shell{max-width:var(--shell);margin:0 auto;padding:0 28px;}
 section{position:relative;}
-.band{padding:clamp(72px,11vw,150px) 0;}
+.band{padding:clamp(48px,6vw,88px) 0;}
 .rule{height:1px;background:var(--line-soft);max-width:var(--shell);margin:0 auto;}
 
 .btn{
@@ -193,7 +206,7 @@ section{position:relative;}
     opacity:0;visibility:hidden;
     transition:max-height .32s var(--ease), opacity .24s var(--ease), visibility .24s var(--ease);
   }
-  .nav.open{max-height:80vh;opacity:1;visibility:visible;overflow:auto;}
+  .nav.open{max-height:85vh;opacity:1;visibility:visible;overflow:auto;}
   .nav a{font-size:17px;padding:14px 16px;border-radius:12px;}
   .nav .nav-cta{
     display:inline-flex;justify-content:center;margin-top:6px;
@@ -202,56 +215,40 @@ section{position:relative;}
   .nav .nav-cta:hover{background:var(--clay-deep);color:var(--paper-lift);}
 }
 
-/* page hero */
-.page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:16ch;}
-.page-hero .lede{
-  font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:38ch;text-wrap:pretty;
-  margin-top:28px;
+/* post hero */
+.post-hero{padding:clamp(32px,4vw,56px) 0 clamp(24px,3vw,36px);}
+.post-hero h1{max-width:16ch;}
+.post-meta{
+  margin-top:22px;font-size:14px;letter-spacing:0.04em;
+  color:var(--ink-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
+.post-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--ink-faint);}
 
-/* testimonial cards */
-.test-list{display:flex;flex-direction:column;gap:28px;margin-top:0;}
-.test-card{
-  background:var(--paper-lift);
-  border:1px solid var(--line-soft);
-  border-radius:22px;
-  padding:clamp(32px,5vw,56px);
-  max-width:72ch;
+/* article content */
+.content{max-width:68ch;}
+.content .intro{font-size:clamp(20px,2.1vw,23px);color:var(--ink);font-family:var(--font-display);line-height:1.4;margin:0 0 1.2em;}
+.content p{margin:0 0 1.35em;color:var(--ink-soft);}
+.content h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:2em 0 .55em;letter-spacing:-0.01em;
 }
-.test-card blockquote{
-  font-family:var(--font-display);
-  font-size:clamp(18px,2vw,22px);
-  line-height:1.72;
-  color:var(--ink-soft);
-  margin:0 0 28px;
-  font-style:italic;
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+
+/* post footer cta */
+.post-end{
+  margin-top:3em;padding-top:1.8em;border-top:1px solid var(--line-soft);
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
 }
-.test-card blockquote::before{
-  content:'\201C';
-  font-size:1.3em;
-  color:var(--clay-soft);
-  line-height:0;
-  vertical-align:-0.25em;
-  margin-right:2px;
+.post-end .back{
+  font-weight:600;font-size:15px;color:var(--ink-soft);text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;
 }
-.test-card blockquote::after{
-  content:'\201D';
-  font-size:1.3em;
-  color:var(--clay-soft);
-  line-height:0;
-  vertical-align:-0.25em;
-  margin-left:2px;
-}
-.test-card .attr{
-  font-family:var(--font-body);
-  font-weight:600;
-  font-size:16px;
-  color:var(--ink);
-  letter-spacing:0.02em;
-}
-.test-card .attr::before{content:'';}
+.post-end .back:hover{color:var(--clay-deep);}
+.post-end .back .arrow{font-family:var(--font-display);}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -291,8 +288,8 @@ section{position:relative;}
       <a href="index.html#who">Who it's for</a>
       <a href="index.html#about">About</a>
       <a href="faq.html">FAQ</a>
-      <a href="testimonials.html" class="active">Testimonials</a>
-      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html" class="active">Blog</a>
       <a class="btn btn-clay nav-cta" href="index.html#book">Get in touch</a>
     </nav>
     <a class="btn btn-clay hdr-cta" href="index.html#book">Get in touch</a>
@@ -302,38 +299,66 @@ section{position:relative;}
   </div>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
+<!-- ===================== POST HERO ===================== -->
+<section class="post-hero">
   <div class="shell">
-    <p class="eyebrow">In their own words</p>
-    <h1 class="display">What people say</h1>
-    <p class="lede">Experiences shared by people who have had sessions with Sean.</p>
+    <p class="eyebrow"><a href="blog.html" style="color:inherit;text-decoration:none;">Blog</a></p>
+    <h1 class="display">The Box</h1>
+    <div class="post-meta">
+      <span>Sean Paul Denny</span>
+      <span class="dot"></span>
+      <span>July 2026</span>
+    </div>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== TESTIMONIALS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="test-list">
+    <article class="content">
+      <p class="intro">For a long time, I couldn't order a coffee.</p>
 
-      <article class="test-card reveal">
-        <blockquote>My Pantarei sessions with Sean have been a soft and supportive space for connecting with my emotions on a deeper level. Creating space to really feel what is happening in my body has been very meaningful for me. When I don't fully understand what I'm feeling or find myself stuck, I usually turn to non-verbal practices like dance, breathwork, or movement. Working with Sean offered something different, a gentle way to begin putting feelings I couldn't fully grasp into words. Through his thoughtful questions, what felt unclear started to take shape and expressing them was really relieving and liberating. I'm grateful for the way he creates a space of empathy and non-judgment, allowing a genuine sense of exploration to unfold. It felt like a space where I can truly be myself, where crying, laughing, and all feelings were welcome.</blockquote>
-        <p class="attr">Merve</p>
-      </article>
+      <p>Not everywhere, and not always. But if the shop was crowded, or the line was disorganized, or it wasn't clear where you ordered and where you picked up, my head would start to spin. Maybe I'd get my order wrong. Maybe they'd get it wrong. Maybe I was standing in the wrong place. Maybe I'd pick up someone else's cup, or someone would take mine, and then what? The spiral would go around and around until the answer became obvious: just don't get the coffee.</p>
 
-      <article class="test-card reveal">
-        <blockquote>Sean holds space in a really special way, with a presence that's grounded and calming. I always feel safe to express and explore whatever comes up, and the way they check in for consent throughout a session makes it easy to trust the process. They have a real gift for deeply listening and asking thought provoking questions (not steering you anywhere, just gently opening up angles you hadn't considered so you can come to your own realizations). In my session, I was able to let some really intense emotions move through me, and it felt both safe and freeing. I can't recommend Sean's Pantarei bodywork enough.</blockquote>
-        <p class="attr">Savita</p>
-      </article>
+      <p>Underneath all of that noise was a quieter belief, one I couldn't have named at the time. I didn't feel like I had the right to be there.</p>
 
-      <article class="test-card reveal">
-        <blockquote>I've had a couple of sessions with Sean, and each time the experience has been remarkable. He creates a space where it feels safe to open up, even when it's difficult. It's fascinating to notice how the body reflects emotions. His guidance, combined with contact to the body area involved, helps calm the nervous system and brings relief. Sean asks the right questions, truly listens, and his gentle, understanding tone makes each session feel both supportive and grounded. I can definitely say, that Sean's practice of the Panterai approach works, and his sessions are effective while remaining deeply respectful of your experience.</blockquote>
-        <p class="attr">Ana</p>
-      </article>
+      <h2>A small, invisible thing</h2>
+      <p>When I first tried to explain this to my practitioner, I reached for an image: a box.</p>
+      <p>I felt like the world needed me to be small. Even though part of me wanted attention, wanted to be seen, I felt like there was no room for me. And the box wasn't just a cage, it was also a hiding place. Being outside of it terrified me, because outside the box was where rejection lived. So I made myself a tiny, invisible thing, with pressure coming in from every side, and I called that safety.</p>
+      <p>If you've ever stood in a line rehearsing a two-word order, you know the box. You might picture it differently, but you know it.</p>
 
-    </div>
+      <h2>What the work actually was</h2>
+      <p>I want to be honest about how this changed, because the honest version is less impressive than the version you'd expect, and more useful.</p>
+      <p>My journey started with CBT. Cognitive behavioural therapy gave me the concepts. It's probably where I first became aware that the box existed at all, and I'm grateful for that kickstart. But it didn't change anything for me, because I could understand my patterns perfectly well and still not feel any of it in my body. I could describe the box in detail. I just couldn't get out of it.</p>
+      <p>What changed things was Pantarei, a somatic practice that works with touch, presence, and what's actually happening in your body. And here's the part that surprises people: I never worked on the box directly. I didn't show up and say "I have this box and I want it gone." The work was showing up every week, talking about my feelings, and trying to connect those feelings to my body. Trying to name a feeling when I didn't know what it was. Taking a guess at where it lived in my body, or letting my practitioner put their hands somewhere and finding out.</p>
+      <p>Sometimes giving a feeling space meant staying quiet, because I noticed that if I described the feeling out loud, it would disappear. That was new to me. It told me this wasn't talking about my life with some bodywork attached. It was something else.</p>
+      <p>The box got bigger on its own. Not as a project, just as a sensation that changed over time. And when the box was bigger, I could physically move more. I felt more open. I had more capacity, not just for the coffee line, but for all sorts of things.</p>
+      <p>I won't pretend this work is linear, because it isn't. Some weeks nothing seems to happen. What it asks of you isn't belief, exactly. It's the willingness to not know for a while.</p>
+
+      <h2>Room to expand</h2>
+      <p>Somewhere along the way, I realized the box wasn't shrinking me anymore. It was making room.</p>
+      <p>It turned out it was okay for me to take up space. I had the capacity to stand in that line, and I had exactly as much right to a coffee as the next person in it. That realization is where the name of this practice comes from. Not room as in escape, room as in space that belongs to you.</p>
+
+      <h2>The box, today</h2>
+      <p>Here's the part no one expects. The box didn't disappear. It changed jobs.</p>
+      <p>Today the box isn't a constriction, it's a boundary. It's the walls of the space I deserve, and I hold them up. And when I need to hold them, I can tap into my anger to do it.</p>
+      <p>That word makes people nervous, so let me be clear: this anger isn't dangerous, and it isn't pointed at anybody. It's strength, and it's a reminder. Mine comes from two words: never again. Never again will I make myself small. Never again will I stay silent to stay safe.</p>
+      <p>In practice it looks ordinary. It's telling my partner how I really feel about something, when before I would have been too afraid of the reaction. It's saying what I think at work, even when I know my boss won't like it. It's sitting in a social space that once would have been unbearable, comfortably uncomfortable, and staying.</p>
+      <p>It's standing in line and ordering a coffee.</p>
+
+      <h2>If you're still in the small box</h2>
+      <p>Maybe you're reading this from inside the tiny version, mid-spiral, rehearsing your order. I'm not going to promise you anything, and I'm not going to tell you what to do.</p>
+      <p>I'll just tell you the thing I wish someone had told me.</p>
+      <p>You are worth doing the work for. You are worthy of your own love. And you can give yourself the gift of presence by just being you. You don't have to be anybody else. You don't have to look like the rest of the people in the line.</p>
+      <p>You can be just you. And it really, really is enough.</p>
+
+      <div class="post-end">
+        <a class="back" href="blog.html"><span class="arrow">←</span> All writing</a>
+        <a class="btn btn-clay" href="index.html#book">Get in touch <span class="arrow">→</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -361,7 +386,6 @@ section{position:relative;}
           <a href="faq.html">FAQ</a>
           <a href="testimonials.html">Testimonials</a>
           <a href="blog.html">Blog</a>
-      <a href="blog.html">Blog</a>
         </div>
         <div class="foot-col">
           <h4>Begin</h4>
@@ -395,17 +419,6 @@ const setNav = (open) => {
 navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
-
-(function(){
-  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
-  const vh = () => window.innerHeight || document.documentElement.clientHeight;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top > vh() * 0.92) io.observe(el);
-  });
-})();
 </script>
 </body>
 </html>
