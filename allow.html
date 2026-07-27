@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog | Room to Expand</title>
-<meta name="description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:title" content="Blog | Room to Expand">
-<meta property="og:description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:type" content="website">
+<title>Allow: Holding Non-Judgmental Space | Room to Expand</title>
+<meta name="description" content="A word tattooed on my hand, the games industry, and learning to hold non-judgmental space for whoever is in front of you. Room to Expand, Berlin.">
+<meta property="og:title" content="Allow: Holding Non-Judgmental Space">
+<meta property="og:description" content="A word tattooed on my hand, the games industry, and learning to hold non-judgmental space for whoever is in front of you. Room to Expand, Berlin.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,6 +55,17 @@
       "sameAs": [
         "https://www.instagram.com/roomtoexpand"
       ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://roomtoexpand.me/allow#post",
+      "headline": "Allow",
+      "description": "A word tattooed on my hand, the games industry, and learning to hold non-judgmental space for whoever is in front of you.",
+      "datePublished": "2026-07-21",
+      "inLanguage": "en",
+      "author": { "@id": "https://roomtoexpand.me/#sean" },
+      "publisher": { "@id": "https://roomtoexpand.me/#business" },
+      "mainEntityOfPage": "https://roomtoexpand.me/allow"
     }
   ]
 }
@@ -109,7 +120,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(40px,6.2vw,72px);}
+h1.display{font-size:clamp(44px,7vw,84px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -204,40 +215,40 @@ section{position:relative;}
   .nav .nav-cta:hover{background:var(--clay-deep);color:var(--paper-lift);}
 }
 
-/* page hero */
-.page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:20ch;}
-.page-hero .lede{
-  font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:52ch;text-wrap:pretty;
-  margin-top:28px;
+/* post hero */
+.post-hero{padding:clamp(32px,4vw,56px) 0 clamp(24px,3vw,36px);}
+.post-hero h1{max-width:16ch;}
+.post-meta{
+  margin-top:22px;font-size:14px;letter-spacing:0.04em;
+  color:var(--ink-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
+.post-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--ink-faint);}
 
-/* post list */
-.post-list{max-width:74ch;}
-.post-item{
-  display:block;text-decoration:none;
-  padding:34px 0;border-top:1px solid var(--line-soft);
-}
-.post-item:first-child{border-top:none;padding-top:0;}
-.post-item .post-date{
-  font-size:13px;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--ink-mute);margin:0 0 12px;
-}
-.post-item h2{
+/* article content */
+.content{max-width:68ch;}
+.content .intro{font-size:clamp(20px,2.1vw,23px);color:var(--ink);font-family:var(--font-display);line-height:1.4;margin:0 0 1.2em;}
+.content p{margin:0 0 1.35em;color:var(--ink-soft);}
+.content h2{
   font-family:var(--font-display);font-weight:500;
-  font-size:clamp(26px,3.4vw,38px);line-height:1.12;color:var(--ink);
-  margin:0 0 .35em;letter-spacing:-0.01em;
-  transition:color .2s var(--ease);
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:2em 0 .55em;letter-spacing:-0.01em;
 }
-.post-item:hover h2{color:var(--clay-deep);}
-.post-item .dek{color:var(--ink-soft);margin:0 0 16px;font-size:17px;max-width:60ch;}
-.post-item .more{
-  font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--clay-deep);
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+
+/* post footer cta */
+.post-end{
+  margin-top:3em;padding-top:1.8em;border-top:1px solid var(--line-soft);
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+}
+.post-end .back{
+  font-weight:600;font-size:15px;color:var(--ink-soft);text-decoration:none;
   display:inline-flex;align-items:center;gap:8px;
 }
-.post-item .more .arrow{font-family:var(--font-display);font-size:17px;transition:transform .2s var(--ease);}
-.post-item:hover .more .arrow{transform:translateX(3px);}
+.post-end .back:hover{color:var(--clay-deep);}
+.post-end .back .arrow{font-family:var(--font-display);}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -288,37 +299,69 @@ section{position:relative;}
   </div>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
+<!-- ===================== POST HERO ===================== -->
+<section class="post-hero">
   <div class="shell">
-    <p class="eyebrow">Notes from the practice</p>
-    <h1 class="display">Writing</h1>
-    <p class="lede">Occasional reflections on the body, the work, and what somatic practice is actually like from the inside.</p>
+    <p class="eyebrow"><a href="blog.html" style="color:inherit;text-decoration:none;">Blog</a></p>
+    <h1 class="display">Allow</h1>
+    <div class="post-meta">
+      <span>Sean Paul Denny</span>
+      <span class="dot"></span>
+      <span>21 July 2026</span>
+    </div>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== POSTS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="post-list">
+    <article class="content">
+      <p class="intro">There's a word tattooed on my right hand, in the webbing between my thumb and index finger. It says "allow."</p>
 
-      <a class="post-item" href="allow.html">
-        <p class="post-date">21 July 2026</p>
-        <h2>Allow</h2>
-        <p class="dek">A word tattooed on my hand, the games industry, and what it means to hold non-judgmental space for whoever is in front of you.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>It's there for a reason. When you shake someone's hand, that's the spot where the two hands connect. Which means every time I reach out to meet someone, the reminder is sitting right at the point of contact.</p>
 
-      <a class="post-item" href="the-box.html">
-        <p class="post-date">21 July 2026</p>
-        <h2>The Box</h2>
-        <p class="dek">For a long time, I couldn't order a coffee. A story about a box, somatic work, and learning that it is okay to take up space.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>Here's what it reminds me of, and why I needed it inked into my skin.</p>
 
-    </div>
+      <h2>Bombs of truth</h2>
+      <p>For years I worked in the games industry, and for part of that time I ran an insights and research team. I had the data. I collected the data. And when it was time to share findings with a development team, I would walk into that meeting like the righteous voice of the customer, here to tell everyone what needed to be fixed.</p>
+      <p>One day, as I came in to present, the president of the company started humming "Ride of the Valkyries." Bum ba da bum, bum ba da bum. If you know Apocalypse Now, you know the scene: helicopters sweeping in, napalm falling on the forest. Here comes Sean, to drop the bombs.</p>
+      <p>And I owned it. Bombs of truth, I thought.</p>
+      <p>Here's the uncomfortable part: I wasn't wrong. The data was good. The problems were real. And it still didn't work, because I delivered it as an attack. I made every finding a verdict and every meeting a contest, and it didn't make people want to work with me. What I should have been doing was working with the team. Not "here's what I found, here's what you got wrong," but "here's what we learned, here's what we're doing about it." Same data. Completely different room.</p>
+      <p>Looking back on it doesn't feel good. But it taught me the thing the tattoo now carries.</p>
+
+      <h2>What "allow" actually means</h2>
+      <p>Somewhere along the way I had an epiphany that sounds obvious written down and changed everything in practice: when someone challenges my idea, it's not because they want my idea to lose. It's because they're holding on to something of their own, something that is just as important to them as my thing is to me.</p>
+      <p>Their truth is as true for them as mine is for me.</p>
+      <p>I know how that sentence lands for a certain kind of reader, because I am that kind of reader. It sounds like relativism. It sounds like "so the facts don't matter anymore?" But look at the Valkyries story again. The facts mattered. The facts were fine. What failed was everything wrapped around the facts: the need to win, the framing of the conversation as a competition with one right answer. Allowing doesn't mean surrendering what you know. It means separating what you know from your need to be right about it.</p>
+      <p>Most dead conversations don't die because someone was wrong. They die of miscommunication, two people too busy being right to actually talk.</p>
+      <p>So now, instead of hearing a challenge as an argument or an attack, I try to meet it with what I've come to call radical kindness. It has two parts. Curiosity: why do they feel that way? What are they holding that makes them this passionate? I can set my thing down for a minute and find out. And empathy: the recognition that we're almost always trying to reach the same positive result. It's not a competition.</p>
+      <p>I've tested this since the tattoo. There was a colleague whose background and way of working were so different from mine that I couldn't find a way in, and it was genuinely frustrating. When I finally got curious instead of frustrated, I started to see their day-to-day: the pressures on them, what their role demanded, what was actually at stake for them. Once I could see where they were coming from, I could change how I communicated. The person didn't change. I did.</p>
+
+      <h2>Holding the space</h2>
+      <p>These days, "allow" has a second job. In my bodywork practice, someone is on the table, and my work is to hold a non-judgmental space for whatever shows up.</p>
+      <p>This is where the word really shines, because it truly is that simple: allow the person in the room to be who they are, right now, in this moment. Not where they came from. Not what they did right or wrong. Just who is in front of me, here and now.</p>
+      <p>It's a kind of listening most of us never do. Not listening to respond, not listening for your opening. Just listening. Just being present. And I want to be honest: it's hard. It's still hard for me today. It's easier than it was, but it's not easy. It's an active practice, and you have to keep practicing it.</p>
+      <p>Recently in a session, someone described how they experience a feeling in a way I had never heard of and never experienced myself. I'm keeping this deliberately vague, because what happens in that room stays in that room. But here's the point: there was no follow-up question, no "are you sure it wasn't more like this?" If that's how they feel it, that's how they feel it. Full stop. Their experience doesn't need my verification to be real.</p>
+      <p>And what landed most wasn't the absence of doubt. It was what came instead. "Wow," I said, "that sounds like a really wonderful way to experience feelings." Because holding non-judgmental space isn't neutral silence. It's meeting someone's inner world with genuine, enthusiastic curiosity, with delight instead of doubt. Not judging is half the job. Actively welcoming is the other half.</p>
+      <p>And then there's the moment I hear all the time, on the table and off it: "This is going to sound silly, but..."</p>
+      <p>No. It's not silly. Part of holding non-judgmental space is catching people in the act of judging themselves, gently interrupting the combative language they aim at their own feelings, and encouraging them to just say the feeling without putting it on trial first.</p>
+
+      <h2>Simple, not easy</h2>
+      <p>You will probably never have someone on a bodywork table. But you already have someone in your life who is mid-confession. A partner finally saying the thing. A kid staring at the floor. A colleague starting with "this might sound stupid."</p>
+      <p>If you want to be the person who can hold that moment, here's where it starts: see the person in front of you. Not through your own eyes, not through your own lived experience. Just see who is there, right then.</p>
+      <p>Your instinct will be to fix. Maybe to argue, or to reach for better data. Part of you will insist you've been through this and you know the way out. But you haven't been through it, because you're not them. You can't be them, just like nobody else can be you.</p>
+      <p>So instead, accept what's actually happening: someone is trusting you. They are handing you something vulnerable. That's a gift. Take it as one.</p>
+      <p>Simple, right? Simple, but not easy. We are trained to judge. We are trained to compare. We are conditioned to believe we can do better and know better, because that is how the world evaluates us.</p>
+      <p>This isn't about that. This is about allowing.</p>
+      <p>It's written on my hand, right where a handshake lands.</p>
+
+      <div class="post-end">
+        <a class="back" href="blog.html"><span class="arrow">&larr;</span> All writing</a>
+        <a class="btn btn-clay" href="index.html#book">Get in touch <span class="arrow">&rarr;</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -379,17 +422,6 @@ const setNav = (open) => {
 navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
-
-(function(){
-  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
-  const vh = () => window.innerHeight || document.documentElement.clientHeight;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top > vh() * 0.92) io.observe(el);
-  });
-})();
 </script>
 </body>
 </html>
