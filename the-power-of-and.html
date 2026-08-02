@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog | Room to Expand</title>
-<meta name="description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:title" content="Blog | Room to Expand">
-<meta property="og:description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:type" content="website">
+<title>The Power of And: Emotional Capacity | Room to Expand</title>
+<meta name="description" content="On emotional capacity: the room to hold more than one feeling at once, why it matters, and how it grows. From Room to Expand, Berlin.">
+<meta property="og:title" content="The Power of And: Emotional Capacity">
+<meta property="og:description" content="On emotional capacity: the room to hold more than one feeling at once, why it matters, and how it grows. From Room to Expand, Berlin.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,6 +55,17 @@
       "sameAs": [
         "https://www.instagram.com/roomtoexpand"
       ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://roomtoexpand.me/the-power-of-and#post",
+      "headline": "The Power of And",
+      "description": "On emotional capacity: the room to hold more than one feeling at once, why it matters, and how it grows.",
+      "datePublished": "2026-07-27",
+      "inLanguage": "en",
+      "author": { "@id": "https://roomtoexpand.me/#sean" },
+      "publisher": { "@id": "https://roomtoexpand.me/#business" },
+      "mainEntityOfPage": "https://roomtoexpand.me/the-power-of-and"
     }
   ]
 }
@@ -109,7 +120,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(40px,6.2vw,72px);}
+h1.display{font-size:clamp(44px,7vw,84px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -204,40 +215,40 @@ section{position:relative;}
   .nav .nav-cta:hover{background:var(--clay-deep);color:var(--paper-lift);}
 }
 
-/* page hero */
-.page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:20ch;}
-.page-hero .lede{
-  font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:52ch;text-wrap:pretty;
-  margin-top:28px;
+/* post hero */
+.post-hero{padding:clamp(32px,4vw,56px) 0 clamp(24px,3vw,36px);}
+.post-hero h1{max-width:16ch;}
+.post-meta{
+  margin-top:22px;font-size:14px;letter-spacing:0.04em;
+  color:var(--ink-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
+.post-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--ink-faint);}
 
-/* post list */
-.post-list{max-width:74ch;}
-.post-item{
-  display:block;text-decoration:none;
-  padding:34px 0;border-top:1px solid var(--line-soft);
-}
-.post-item:first-child{border-top:none;padding-top:0;}
-.post-item .post-date{
-  font-size:13px;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--ink-mute);margin:0 0 12px;
-}
-.post-item h2{
+/* article content */
+.content{max-width:68ch;}
+.content .intro{font-size:clamp(20px,2.1vw,23px);color:var(--ink);font-family:var(--font-display);line-height:1.4;margin:0 0 1.2em;}
+.content p{margin:0 0 1.35em;color:var(--ink-soft);}
+.content h2{
   font-family:var(--font-display);font-weight:500;
-  font-size:clamp(26px,3.4vw,38px);line-height:1.12;color:var(--ink);
-  margin:0 0 .35em;letter-spacing:-0.01em;
-  transition:color .2s var(--ease);
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:2em 0 .55em;letter-spacing:-0.01em;
 }
-.post-item:hover h2{color:var(--clay-deep);}
-.post-item .dek{color:var(--ink-soft);margin:0 0 16px;font-size:17px;max-width:60ch;}
-.post-item .more{
-  font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--clay-deep);
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+
+/* post footer cta */
+.post-end{
+  margin-top:3em;padding-top:1.8em;border-top:1px solid var(--line-soft);
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+}
+.post-end .back{
+  font-weight:600;font-size:15px;color:var(--ink-soft);text-decoration:none;
   display:inline-flex;align-items:center;gap:8px;
 }
-.post-item .more .arrow{font-family:var(--font-display);font-size:17px;transition:transform .2s var(--ease);}
-.post-item:hover .more .arrow{transform:translateX(3px);}
+.post-end .back:hover{color:var(--clay-deep);}
+.post-end .back .arrow{font-family:var(--font-display);}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -288,44 +299,68 @@ section{position:relative;}
   </div>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
+<!-- ===================== POST HERO ===================== -->
+<section class="post-hero">
   <div class="shell">
-    <p class="eyebrow">Notes from the practice</p>
-    <h1 class="display">Writing</h1>
-    <p class="lede">Occasional reflections on the body, the work, and what somatic practice is actually like from the inside.</p>
+    <p class="eyebrow"><a href="blog.html" style="color:inherit;text-decoration:none;">Blog</a></p>
+    <h1 class="display">The Power of And</h1>
+    <div class="post-meta">
+      <span>Sean Paul Denny</span>
+      <span class="dot"></span>
+      <span>27 July 2026</span>
+    </div>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== POSTS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="post-list">
+    <article class="content">
+      <p class="intro">I'm going to start with the thing this post is not about, because it's the thing most writing on emotions is secretly selling.</p>
 
-      <a class="post-item" href="the-power-of-and.html">
-        <p class="post-date">27 July 2026</p>
-        <h2>The Power of And</h2>
-        <p class="dek">On emotional capacity: the room you have for what you're actually feeling, and why holding more than one feeling at once changes everything.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>This is not about learning to feel fine. It's not about regulating yourself until everything is always okay, because everything is not always okay, and a practice built on pretending otherwise will fail you exactly when you need it.</p>
 
-      <a class="post-item" href="allow.html">
-        <p class="post-date">27 July 2026</p>
-        <h2>Allow</h2>
-        <p class="dek">A word tattooed on my hand, the games industry, and what it means to hold non-judgmental space for whoever is in front of you.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>This is about something else: emotional capacity. The amount of room you have for what you're actually feeling. For me, it's the foundation of all of this work, the concept underneath everything else I write about here. If you read <a href="the-box.html">The Box</a>, this is what the box was measuring all along.</p>
 
-      <a class="post-item" href="the-box.html">
-        <p class="post-date">21 July 2026</p>
-        <h2>The Box</h2>
-        <p class="dek">For a long time, I couldn't order a coffee. A story about a box, somatic work, and learning that it is okay to take up space.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <h2>Sad and</h2>
+      <p>Here's what capacity looks like in practice.</p>
+      <p>Last fall, with everything horrible going on in the world, I found myself sad. Weighed down. Pressed flat by the sheer scale of things I could not change. That sadness was real, and it was loud.</p>
+      <p>The way through wasn't to argue myself out of it. It wasn't "don't be sad, look on the bright side." What actually shifted things was making room for wonder and joy next to the sadness. Not instead of. Next to.</p>
+      <p>I can feel sad and I can feel happy, and both of those things are true at the same time. That's the power of and. But here's the catch: the and only works if there's room for it. If I don't have the capacity to hold more than one feeling, then I can't really attend to any of them except the one making the most noise in my system. The loud feeling takes the whole room, and everything quieter gets drowned out.</p>
+      <p>With room for the and, I could reframe. I can't do much as one person against a global pandemic, or a war, or any of it. But one person in another person's life can completely change their day. So I started waking up with a purpose small enough to actually hold: do one good thing. Help one person. Make one person smile. If I manage that, it's been a well-spent day. The sadness about the world didn't leave. It just stopped being the only thing in the room.</p>
 
-    </div>
+      <h2>The loudest feeling wins</h2>
+      <p>The same mechanic runs at work, and you've felt it even if you've never named it.</p>
+      <p>You care passionately about something. Someone pushes back on your idea, or seems to shut it down, even if that's not what they're actually doing. Anger and frustration take the lead, and they're loud. Curiosity and empathy don't disappear in that moment. They're still in you. They just can't get a word in.</p>
+      <p>Without capacity, that's the end of the story: the loud feeling runs the meeting. With capacity, something different becomes possible. You can acknowledge the anger, let it be real and there, and still have space to refocus on curiosity. Some of the working relationships I once found most frustrating started to untangle only when I had enough room to be angry and curious at the same time.</p>
+      <p>Notice what capacity is not: it's not control. I didn't suppress the frustration or perform calm. The frustration got its seat. It just stopped getting all the seats.</p>
+
+      <h2>Feel the feels</h2>
+      <p>So if capacity can grow, how does it grow?</p>
+      <p>I have another tattoo, and it says "Feel the feels." That's the whole method, and it's less obvious than it sounds, because there are three different things people mean by "feeling" a feeling.</p>
+      <p>Stage one: thinking about a feeling. "I like myself." A sentence, an idea, a conclusion.</p>
+      <p>Stage two: thinking that you feel it. "I feel like I like myself." Closer, but still happening from the neck up.</p>
+      <p>Stage three: experiencing it. Actually knowing, in your body, what liking yourself feels like. Letting the feeling all the way through.</p>
+      <p>Most of us live our entire emotional lives in stages one and two and call it feeling. Stage three is different, and stage three is the one that processes anything. That's the core idea of somatic work: the body has to experience the feeling for us to fully comprehend it and move with it. This is why the sharpest insight from talk alone can leave everything unchanged. I've been there. I understood my patterns perfectly and felt none of it.</p>
+      <p>And you can't build capacity by aiming at it. I never sat down and decided "I will now have more emotional capacity." It grew as a side effect of processing what was actually there, week after week, with help and facilitation, which can come in many forms. It's hard. It takes time. It's also amazing.</p>
+      <p>Here's the honest part, and I need you to hear it because every wellness promise says otherwise: processing doesn't take the pain away. The part of me that spent years feeling invisible, not picked, not chosen, not welcome, that hurt, and the hurt doesn't get deleted. We don't leave these things behind. We renegotiate them. We reframe them. We learn from them. And that renegotiation only becomes possible once the feeling has actually been experienced, in the body, instead of managed from a distance.</p>
+
+      <h2>Stop fighting it</h2>
+      <p>Maybe you're reading this at full capacity right now. One loud feeling taking up the whole room, no space for and. You may never do somatic work, and this isn't a pitch for it. So what's the smallest true starting point, today?</p>
+      <p>It's not acknowledging the feeling. Acknowledging is stage one wearing a nicer shirt. The starting point is welcoming it.</p>
+      <p>Think about how we actually talk to our own emotions. You're sad? Don't be sad, be happy. You're angry? It's not okay to be angry, do better. Go away, sadness. I don't want to be angry. We speak to our feelings the way an impatient parent speaks to an inconvenient child, and then we wonder why they get louder.</p>
+      <p>Try the opposite. Enthusiastically accept what's there. Fuck yes, I'm angry. Yes, I am sad, and it has my attention. If you can sit with it yourself, great. If you can bring it to a friend, or a therapist, or a practitioner, also great. But before any of that: stop fighting it.</p>
+      <p>One thing, clearly: embracing a feeling is not acting it out. Welcoming your anger doesn't mean unloading it on someone. The reactive outburst isn't what the emotion wants anyway. What the emotion wants is your attention, because it's trying to show you something. It's trying to teach you something.</p>
+      <p>And you can't learn from what you won't accept.</p>
+      <p>That's emotional capacity. Not a room where everything is fine. A room big enough for everything that's true.</p>
+
+      <div class="post-end">
+        <a class="back" href="blog.html"><span class="arrow">&larr;</span> All writing</a>
+        <a class="btn btn-clay" href="index.html#book">Get in touch <span class="arrow">&rarr;</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -386,17 +421,6 @@ const setNav = (open) => {
 navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
-
-(function(){
-  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
-  const vh = () => window.innerHeight || document.documentElement.clientHeight;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top > vh() * 0.92) io.observe(el);
-  });
-})();
 </script>
 </body>
 </html>
