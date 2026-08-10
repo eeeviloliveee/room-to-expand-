@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog | Room to Expand</title>
-<meta name="description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:title" content="Blog | Room to Expand">
-<meta property="og:description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:type" content="website">
+<title>As Is: Renegotiating the Parts of Yourself | Room to Expand</title>
+<meta name="description" content="On the parts we build to survive, renegotiating them instead of fighting them, and how being accepted as is changes your relationship with yourself.">
+<meta property="og:title" content="As Is: Renegotiating the Parts of Yourself">
+<meta property="og:description" content="On the parts we build to survive, renegotiating them instead of fighting them, and how being accepted as is changes your relationship with yourself.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,6 +55,17 @@
       "sameAs": [
         "https://www.instagram.com/roomtoexpand"
       ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://roomtoexpand.me/as-is#post",
+      "headline": "As Is",
+      "description": "On the parts we build to survive, renegotiating them instead of fighting them, and how being accepted as is changes your relationship with yourself.",
+      "datePublished": "2026-08-10",
+      "inLanguage": "en",
+      "author": { "@id": "https://roomtoexpand.me/#sean" },
+      "publisher": { "@id": "https://roomtoexpand.me/#business" },
+      "mainEntityOfPage": "https://roomtoexpand.me/as-is"
     }
   ]
 }
@@ -109,7 +120,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(40px,6.2vw,72px);}
+h1.display{font-size:clamp(44px,7vw,84px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -204,40 +215,40 @@ section{position:relative;}
   .nav .nav-cta:hover{background:var(--clay-deep);color:var(--paper-lift);}
 }
 
-/* page hero */
-.page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:20ch;}
-.page-hero .lede{
-  font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:52ch;text-wrap:pretty;
-  margin-top:28px;
+/* post hero */
+.post-hero{padding:clamp(32px,4vw,56px) 0 clamp(24px,3vw,36px);}
+.post-hero h1{max-width:16ch;}
+.post-meta{
+  margin-top:22px;font-size:14px;letter-spacing:0.04em;
+  color:var(--ink-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
+.post-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--ink-faint);}
 
-/* post list */
-.post-list{max-width:74ch;}
-.post-item{
-  display:block;text-decoration:none;
-  padding:34px 0;border-top:1px solid var(--line-soft);
-}
-.post-item:first-child{border-top:none;padding-top:0;}
-.post-item .post-date{
-  font-size:13px;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--ink-mute);margin:0 0 12px;
-}
-.post-item h2{
+/* article content */
+.content{max-width:68ch;}
+.content .intro{font-size:clamp(20px,2.1vw,23px);color:var(--ink);font-family:var(--font-display);line-height:1.4;margin:0 0 1.2em;}
+.content p{margin:0 0 1.35em;color:var(--ink-soft);}
+.content h2{
   font-family:var(--font-display);font-weight:500;
-  font-size:clamp(26px,3.4vw,38px);line-height:1.12;color:var(--ink);
-  margin:0 0 .35em;letter-spacing:-0.01em;
-  transition:color .2s var(--ease);
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:2em 0 .55em;letter-spacing:-0.01em;
 }
-.post-item:hover h2{color:var(--clay-deep);}
-.post-item .dek{color:var(--ink-soft);margin:0 0 16px;font-size:17px;max-width:60ch;}
-.post-item .more{
-  font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--clay-deep);
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+
+/* post footer cta */
+.post-end{
+  margin-top:3em;padding-top:1.8em;border-top:1px solid var(--line-soft);
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+}
+.post-end .back{
+  font-weight:600;font-size:15px;color:var(--ink-soft);text-decoration:none;
   display:inline-flex;align-items:center;gap:8px;
 }
-.post-item .more .arrow{font-family:var(--font-display);font-size:17px;transition:transform .2s var(--ease);}
-.post-item:hover .more .arrow{transform:translateX(3px);}
+.post-end .back:hover{color:var(--clay-deep);}
+.post-end .back .arrow{font-family:var(--font-display);}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -288,51 +299,78 @@ section{position:relative;}
   </div>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
+<!-- ===================== POST HERO ===================== -->
+<section class="post-hero">
   <div class="shell">
-    <p class="eyebrow">Notes from the practice</p>
-    <h1 class="display">Writing</h1>
-    <p class="lede">Occasional reflections on the body, the work, and what somatic practice is actually like from the inside.</p>
+    <p class="eyebrow"><a href="blog.html" style="color:inherit;text-decoration:none;">Blog</a></p>
+    <h1 class="display">As Is</h1>
+    <div class="post-meta">
+      <span>Sean Paul Denny</span>
+      <span class="dot"></span>
+      <span>10 August 2026</span>
+    </div>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== POSTS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="post-list">
+    <article class="content">
+      <p class="intro">Things happen to us, and we build responses to survive them. Out of events, especially the early ones, we create parts, tools, ways of dealing with the world. That original coding sticks around. The nervous system is always scanning, and when it spots something familiar, it goes, "Oh, I already have a solution for this." It doesn't stop to check whether the solution is still valid. It just pulls it off the shelf and runs it.</p>
 
-      <a class="post-item" href="as-is.html">
-        <p class="post-date">10 August 2026</p>
-        <h2>As Is</h2>
-        <p class="dek">On the parts we build to survive, renegotiating them instead of fighting them, and what it means to be accepted as is.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>That's why you can find yourself, decades later, reacting to a colleague's email with machinery you built at sixteen.</p>
 
-      <a class="post-item" href="the-power-of-and.html">
-        <p class="post-date">2 August 2026</p>
-        <h2>The Power of And</h2>
-        <p class="dek">On emotional capacity: the room you have for what you're actually feeling, and why holding more than one feeling at once changes everything.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>By now, most of us have heard some version of this. And for a lot of people, that's exactly the worrying part: the sense that the scanning just happens, that we're on autopilot with no say in the matter. But here's the piece most of us never notice: we're not stuck on autopilot. We don't have to be. We don't have to keep relying on those old parts, tools, and ways of dealing with the world. We can renegotiate them, and we can choose how we live.</p>
 
-      <a class="post-item" href="allow.html">
-        <p class="post-date">27 July 2026</p>
-        <h2>Allow</h2>
-        <p class="dek">A word tattooed on my hand, the games industry, and what it means to hold non-judgmental space for whoever is in front of you.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>This is where emotional capacity earns its keep. Capacity is what buys you the moment between the nervous system reaching for the shelf and you acting on what it grabbed. When you take that minute, you respond instead of react. And honestly, you might still do the old reaction anyway, especially at first. But now you're aware of it, and awareness is where renegotiation begins.</p>
 
-      <a class="post-item" href="the-box.html">
-        <p class="post-date">21 July 2026</p>
-        <h2>The Box</h2>
-        <p class="dek">For a long time, I couldn't order a coffee. A story about a box, somatic work, and learning that it is okay to take up space.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>Renegotiation, it turns out, is a relationship. We have relationships with our parts. Some of them carry an age, some don't, and the age was never the important thing.</p>
 
-    </div>
+      <p>The relationship is the important thing.</p>
+
+      <h2>Meet the fuck-it monster</h2>
+      <p>Let me introduce you to one of mine.</p>
+      <p>Years ago, my therapist and I were doing internal family systems work. If you haven't come across it, internal family systems is an approach built on the idea that we're not one seamless self but a collection of parts, each with its own job, its own history, and its own reasons. You don't have to take that as a literal map of the mind. For me, giving a part a personality, even a name, is simply what makes it workable: something I can meet, get to know, and eventually renegotiate with, instead of a nameless reaction that just happens to me.</p>
+      <p>The part we identified, we came to call the fuck-it monster. The fuck-it monster was the part that would flip the table. The part that didn't care if the world burned. It gave me confidence, real confidence, but reckless confidence. Adversarial, confrontational, and very often completely wrong for the situation I aimed it at.</p>
+      <p>If you've read the earlier posts, you've already met its work. The guy <a href="allow.html">carpet-bombing meetings with data</a>? The fuck-it monster was in the room.</p>
+      <p>But here's what changed everything about how I relate to that part: learning where it came from.</p>
+      <p>Eleventh grade. A teacher accused me of something I didn't do. Someone had looked through her classroom window, apparently disrupting her class, and she decided it was me. When I tried to explain it wasn't, she wouldn't hear it. She didn't know me. It was a school of two thousand kids. "What's your name?" she demanded. And I said no. I'm not telling you my name. And I walked away, because this wasn't fair, and she wasn't trying to understand anything. She was bullying me.</p>
+      <p>She tracked me down anyway, through my homeroom teacher, and the next day I was in an office being asked why I hadn't given my name. I explained again: because she wasn't being fair, she wouldn't listen, and I didn't do it. That didn't matter either. It had to be me. I was forced to apologize.</p>
+      <p>So I said, "Okay. I apologize. But I'm not sorry." And I walked away.</p>
+      <p>I want you to notice something about that kid, because it took me decades to notice it. He was right. The accusation was false, the process was unjust, and refusing to hand over his name to someone who had already convicted him was, for a sixteen-year-old with no power in that room, a genuinely dignified move. The fuck-it monster wasn't born broken. It was born as protection, and that day, it worked.</p>
+      <p>The problem came later, when the same part kept flipping tables in rooms where nobody was bullying me.</p>
+      <p>And this is why the relationship matters more than the part. The answer was never to get rid of the fuck-it monster, and honestly, understanding it didn't come from insight alone. The understanding stayed theoretical until I could work with the anger and frustration in my body, and actually experience what that part had been carrying all those years. Today, the fuck-it monster is still here. It uses its anger for good now. I can still say fuck it, but I don't have to say it in a way that hurts me or anyone around me. It lets me stand up for myself and for what I believe in, and be kind while I do it.</p>
+      <p>Same part. Same fire. Different relationship.</p>
+
+      <h2>Borrowed proof</h2>
+      <p>So how does a relationship with yourself actually change? Not alone, in my experience. This is where other people come in: friends, partners, chosen family, practitioners. Not to fix you. To show you something.</p>
+      <p>Back when I <a href="the-box.html">couldn't go into a crowded coffee shop</a>, I met a friend for a coffee and a walk. She arrived, and I was standing outside the shop, stuck at the wall I couldn't get over. And I asked her: would you go in for me?</p>
+      <p>"Yeah, sure, I'll get you the coffee."</p>
+      <p>That was it. No interrogation, no raised eyebrow, no "what do you mean you can't go in, it's just a coffee shop." For her it was just a coffee shop. For me it was a wall. I told her the whole story later, because I wanted to, not because she required it as the price of admission. In that moment I wasn't judged, wasn't shamed, wasn't wrong. I was just a person who needed a coffee carried out to him.</p>
+      <p>People sometimes describe this as other voices becoming your inner voice, and I used to expect it to work that way. It doesn't, quite. What actually happens is simpler: your voice was heard. You were seen. You were accepted as is. The healthy relationship doesn't install new self-talk. It hands you evidence that you were acceptable the whole time, and the internal monologue slowly updates, because the evidence changed.</p>
+      <p>One clear boundary on this, because "accepted as is" gets misused: it doesn't mean you get to do or say whatever you want. People keep their boundaries. Someone can say "that's not for me" and walk away, and that's their right. But if they choose to stay, if they choose to engage, they don't try to alter you, fix you, or judge you.</p>
+      <p>They just accept. And every time someone does, it gets a little easier to do it for yourself.</p>
+
+      <h2>The giggle</h2>
+      <p>The deepest shift this work made in me is the move from external validation to internal, and I can tell you the exact moment I noticed it, because I started giggling on my practitioner's table.</p>
+      <p>She asked why. I said: "Because it's so simple, and it feels maybe not good but right. Maybe not right but good."</p>
+      <p>Here's what was so funny. For most of my life, every situation carried this enormous invisible weight: how will people respond? Will they like me? Will they like it? Will they challenge it? Being right, being picked, being the one with the best data, all of it was external validation wearing a work badge. And on that table I realized I could just live by my values and my principles, and the judgment was done. Already complete. If somebody doesn't like it, that's fair. They don't have to. If it's a shared responsibility, we still work to a resolution together. If it's not, they're free to walk away, and so am I. That applies at work, in friendship, in love.</p>
+      <p>Take honesty. The old weight: should I say what I really think? What if they don't like it? What if it hurts their feelings? The principle: I am honest. And honest doesn't mean blunt, and it doesn't mean rude. You can be honest in a kind way. But once the principle decides, the spinning stops, and what's left is relief. I don't have to worry about this. I can just act. I can just take the step.</p>
+      <p>Do I still make mistakes? Of course. That's part of being human. But a mistake made while living your principles is something you can stand behind and learn from. A mistake made while chasing approval just feeds the spin.</p>
+      <p>The shift feels like lightness. Like space. Like you have expanded.</p>
+
+      <h2>The room and who runs it</h2>
+      <p>I've written here about <a href="the-power-of-and.html">capacity</a>, the room you have for everything that's true. This post is about who runs that room, and the answer is: your relationship with yourself. The parts you've stopped fighting. The evidence, borrowed from people who accepted you as is, that you were never the problem. The principles that end the spin before it starts.</p>
+      <p>These days, I can walk into the coffee shop. Sometimes it's still uncomfortable, and that's okay, because I know I'm allowed to take up space there. And when my nervous system spots something familiar and reaches for the old solution on the shelf, I can meet it like a relationship too: don't worry. I got this. It's okay.</p>
+      <p>When you practice making space for yourself, the rest of the room follows.</p>
+
+      <div class="post-end">
+        <a class="back" href="blog.html"><span class="arrow">&larr;</span> All writing</a>
+        <a class="btn btn-clay" href="index.html#book">Get in touch <span class="arrow">&rarr;</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -393,17 +431,6 @@ const setNav = (open) => {
 navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
-
-(function(){
-  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
-  const vh = () => window.innerHeight || document.documentElement.clientHeight;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top > vh() * 0.92) io.observe(el);
-  });
-})();
 </script>
 </body>
 </html>
