@@ -251,6 +251,45 @@ section{position:relative;}
 .foot-col a:hover{color:var(--clay-deep);}
 .foot-legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;line-height:1.6;color:var(--ink-mute);max-width:70ch;}
 .foot-fine{margin-top:18px;font-size:13px;color:var(--ink-faint);}
+.foot-fine a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
+
+/* newsletter signup */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;}
+.nl-band{background:var(--sage-wash);}
+.nl-wrap{max-width:56ch;}
+.nl-wrap h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(28px,3.4vw,40px);line-height:1.1;color:var(--ink);
+  margin:0 0 .4em;letter-spacing:-0.01em;
+}
+.nl-lede{color:var(--ink-soft);font-size:clamp(17px,2vw,19px);margin:0;max-width:48ch;}
+.ml-subscribe-form-44928552{max-width:440px;margin-top:28px;}
+.nl-formEl{display:flex;flex-direction:column;gap:16px;}
+.nl-input{
+  width:100%;font-family:var(--font-body);font-size:16px;color:var(--ink);
+  background:var(--paper-lift);border:1.5px solid var(--line);border-radius:12px;
+  padding:14px 16px;line-height:1.2;transition:border-color .2s var(--ease);
+}
+.nl-input::placeholder{color:var(--ink-faint);}
+.nl-input:focus{outline:none;border-color:var(--sage-deep);}
+.nl-consent{display:flex;gap:11px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--ink-soft);cursor:pointer;}
+.nl-consent input{margin:2px 0 0;width:18px;height:18px;flex:none;accent-color:var(--clay);cursor:pointer;}
+.nl-consent a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.nl-consentError{color:var(--clay-deep);font-size:13px;margin:0;}
+.nl-btn{
+  align-self:flex-start;background:var(--clay);color:var(--paper-lift);
+  font-family:var(--font-body);font-weight:600;font-size:16px;border:none;cursor:pointer;
+  padding:14px 30px;border-radius:999px;line-height:1;
+  transition:background .25s var(--ease);
+}
+.nl-btn:hover{background:var(--clay-deep);}
+.nl-btn .ml-form-embedSubmitLoad{display:inline-block;width:16px;height:16px;}
+.nl-fine{font-size:13px;color:var(--ink-mute);margin:14px 0 0;}
+.nl-success{
+  max-width:440px;margin-top:28px;padding:22px 24px;
+  background:var(--paper-lift);border:1px solid var(--line-soft);border-radius:16px;
+}
+.nl-success p{margin:0;color:var(--ink);font-family:var(--font-display);font-style:italic;font-size:19px;line-height:1.4;}
 
 @media(prefers-reduced-motion:no-preference){
   .reveal.in{animation:rte-fadeup .7s var(--ease) both;}
@@ -344,6 +383,45 @@ section{position:relative;}
   </div>
 </section>
 
+<div class="rule"></div>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<section class="band nl-band">
+  <div class="shell">
+    <div class="nl-wrap">
+      <p class="eyebrow reveal">Get it by email</p>
+      <h2 class="reveal">New posts in your inbox</h2>
+      <p class="nl-lede reveal">A new reflection most weeks. Unsubscribe anytime, and I will never share your address.</p>
+
+      <div id="mlb2-44928552" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-44928552 reveal">
+        <div class="row-form">
+          <form class="ml-block-form nl-formEl" action="https://assets.mailerlite.com/jsonp/2581333/forms/196081629557425935/subscribe" method="post" target="_blank">
+            <label class="ml-field-group ml-field-email ml-validate-email ml-validate-required" style="display:block;">
+              <span class="sr-only">Email address</span>
+              <input aria-label="email" aria-required="true" type="email" required class="form-control nl-input" name="fields[email]" placeholder="you@example.com" autocomplete="email">
+            </label>
+            <label class="nl-consent">
+              <input type="checkbox" required class="nl-check">
+              <span>I agree to receive new blog posts and occasional updates from Room to Expand by email. I can unsubscribe at any time. See the <a href="privacy.html">Privacy Policy</a>.</span>
+            </label>
+            <p class="nl-consentError" hidden>Please tick the box to give your consent.</p>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <div class="ml-form-embedSubmit">
+              <button type="submit" class="primary nl-btn">Subscribe</button>
+              <button disabled="disabled" style="display:none;" type="button" class="loading nl-btn"><span class="ml-form-embedSubmitLoad"></span><span class="sr-only">Loading...</span></button>
+            </div>
+          </form>
+          <p class="nl-fine">You will get a confirmation email to click before anything is sent (double opt-in).</p>
+        </div>
+        <div class="row-success nl-success" style="display:none;">
+          <p>Almost there. Check your inbox and click the confirmation link to finish subscribing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FOOTER ===================== -->
 <footer class="foot">
   <div class="shell">
@@ -381,7 +459,7 @@ section{position:relative;}
       </div>
     </div>
     <p class="foot-legal">Sean is a student practitioner of the Pantarei Approach. Sessions are not medical or psychiatric treatment.</p>
-    <p class="foot-fine">© 2026 Room to Expand · Berlin</p>
+    <p class="foot-fine">© 2026 Room to Expand · Berlin · <a href="/privacy">Privacy</a></p>
   </div>
 </footer>
 
@@ -413,5 +491,26 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(fal
   });
 })();
 </script>
+
+<!-- MailerLite newsletter form -->
+<script>
+  function ml_webform_success_44928552(){
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-44928552 .row-success').show();
+    $('.ml-subscribe-form-44928552 .row-form').hide();
+  }
+  // Require GDPR consent before submit (belt-and-suspenders alongside native required)
+  (function(){
+    var form = document.querySelector('.ml-subscribe-form-44928552 form.ml-block-form');
+    if (!form) return;
+    var err = form.querySelector('.nl-consentError');
+    form.addEventListener('submit', function(e){
+      var c = form.querySelector('.nl-check');
+      if (c && !c.checked){ e.preventDefault(); e.stopImmediatePropagation(); if (err) err.hidden = false; }
+      else if (err){ err.hidden = true; }
+    }, true);
+  })();
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
 </body>
 </html>
