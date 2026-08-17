@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Room to Expand — Writing</title>
+  <link>https://roomtoexpand.me/blog</link>
+  <atom:link href="https://roomtoexpand.me/feed.xml" rel="self" type="application/rss+xml" />
+  <description>Reflections on the body, the work, and what somatic practice is actually like, from Sean Paul Denny at Room to Expand in Berlin.</description>
+  <language>en</language>
+  <lastBuildDate>Mon, 17 Aug 2026 09:00:00 +0200</lastBuildDate>
+  <item>
+    <title>Washing the Dishes</title>
+    <link>https://roomtoexpand.me/washing-the-dishes</link>
+    <guid isPermaLink="true">https://roomtoexpand.me/washing-the-dishes</guid>
+    <pubDate>Mon, 17 Aug 2026 09:00:00 +0200</pubDate>
+    <description>On learning patience at the kitchen sink: washing the dishes to be present, not to get them done, and a practice you get to keep everywhere else.</description>
+  </item>
+  <item>
+    <title>As Is</title>
+    <link>https://roomtoexpand.me/as-is</link>
+    <guid isPermaLink="true">https://roomtoexpand.me/as-is</guid>
+    <pubDate>Mon, 10 Aug 2026 09:00:00 +0200</pubDate>
+    <description>On the parts we build to survive, renegotiating them instead of fighting them, and what it means to be accepted as is.</description>
+  </item>
+  <item>
+    <title>The Power of And</title>
+    <link>https://roomtoexpand.me/the-power-of-and</link>
+    <guid isPermaLink="true">https://roomtoexpand.me/the-power-of-and</guid>
+    <pubDate>Sun, 02 Aug 2026 09:00:00 +0200</pubDate>
+    <description>On emotional capacity: the room you have for what you're actually feeling, and why holding more than one feeling at once changes everything.</description>
+  </item>
+  <item>
+    <title>Allow</title>
+    <link>https://roomtoexpand.me/allow</link>
+    <guid isPermaLink="true">https://roomtoexpand.me/allow</guid>
+    <pubDate>Mon, 27 Jul 2026 09:00:00 +0200</pubDate>
+    <description>A word tattooed on my hand, the games industry, and what it means to hold non-judgmental space for whoever is in front of you.</description>
+  </item>
+  <item>
+    <title>The Box</title>
+    <link>https://roomtoexpand.me/the-box</link>
+    <guid isPermaLink="true">https://roomtoexpand.me/the-box</guid>
+    <pubDate>Tue, 21 Jul 2026 09:00:00 +0200</pubDate>
+    <description>For a long time, I couldn't order a coffee. A story about a box, somatic work, and learning that it is okay to take up space.</description>
+  </item>
+</channel>
+</rss>
