@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog | Room to Expand</title>
-<meta name="description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:title" content="Blog | Room to Expand">
-<meta property="og:description" content="Writing from Room to Expand: reflections on Pantarei somatic bodywork, the body, and what the work is actually like, from student practitioner Sean Paul Denny in Berlin.">
-<meta property="og:type" content="website">
+<title>Washing the Dishes: On Patience and Presence | Room to Expand</title>
+<meta name="description" content="On learning patience at the kitchen sink: washing the dishes to be present, not to get them done, and a practice you get to keep everywhere else.">
+<meta property="og:title" content="Washing the Dishes: On Patience and Presence">
+<meta property="og:description" content="On learning patience at the kitchen sink: washing the dishes to be present, not to get them done, and a practice you get to keep everywhere else.">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,6 +55,17 @@
       "sameAs": [
         "https://www.instagram.com/roomtoexpand"
       ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://roomtoexpand.me/washing-the-dishes#post",
+      "headline": "Washing the Dishes",
+      "description": "On learning patience at the kitchen sink: washing the dishes to be present, not to get them done, and a practice you get to keep everywhere else.",
+      "datePublished": "2026-08-17",
+      "inLanguage": "en",
+      "author": { "@id": "https://roomtoexpand.me/#sean" },
+      "publisher": { "@id": "https://roomtoexpand.me/#business" },
+      "mainEntityOfPage": "https://roomtoexpand.me/washing-the-dishes"
     }
   ]
 }
@@ -109,7 +120,7 @@ img,svg{display:block;max-width:100%;}
   margin:0;
   text-wrap:balance;
 }
-h1.display{font-size:clamp(40px,6.2vw,72px);}
+h1.display{font-size:clamp(44px,7vw,84px);}
 .eyebrow{
   font-family:var(--font-body);
   font-weight:600;
@@ -204,40 +215,40 @@ section{position:relative;}
   .nav .nav-cta:hover{background:var(--clay-deep);color:var(--paper-lift);}
 }
 
-/* page hero */
-.page-hero{padding:clamp(32px,4vw,56px) 0 clamp(28px,3vw,40px);}
-.page-hero h1{max-width:20ch;}
-.page-hero .lede{
-  font-size:clamp(19px,2.1vw,23px);line-height:1.6;
-  color:var(--ink-soft);max-width:52ch;text-wrap:pretty;
-  margin-top:28px;
+/* post hero */
+.post-hero{padding:clamp(32px,4vw,56px) 0 clamp(24px,3vw,36px);}
+.post-hero h1{max-width:16ch;}
+.post-meta{
+  margin-top:22px;font-size:14px;letter-spacing:0.04em;
+  color:var(--ink-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
+.post-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--ink-faint);}
 
-/* post list */
-.post-list{max-width:74ch;}
-.post-item{
-  display:block;text-decoration:none;
-  padding:34px 0;border-top:1px solid var(--line-soft);
-}
-.post-item:first-child{border-top:none;padding-top:0;}
-.post-item .post-date{
-  font-size:13px;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--ink-mute);margin:0 0 12px;
-}
-.post-item h2{
+/* article content */
+.content{max-width:68ch;}
+.content .intro{font-size:clamp(20px,2.1vw,23px);color:var(--ink);font-family:var(--font-display);line-height:1.4;margin:0 0 1.2em;}
+.content p{margin:0 0 1.35em;color:var(--ink-soft);}
+.content h2{
   font-family:var(--font-display);font-weight:500;
-  font-size:clamp(26px,3.4vw,38px);line-height:1.12;color:var(--ink);
-  margin:0 0 .35em;letter-spacing:-0.01em;
-  transition:color .2s var(--ease);
+  font-size:clamp(24px,3vw,32px);line-height:1.15;color:var(--ink);
+  margin:2em 0 .55em;letter-spacing:-0.01em;
 }
-.post-item:hover h2{color:var(--clay-deep);}
-.post-item .dek{color:var(--ink-soft);margin:0 0 16px;font-size:17px;max-width:60ch;}
-.post-item .more{
-  font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--clay-deep);
+.content strong{color:var(--ink);font-weight:600;}
+.content em{font-style:italic;}
+.content a{color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px;}
+.content a:hover{color:var(--clay);}
+
+/* post footer cta */
+.post-end{
+  margin-top:3em;padding-top:1.8em;border-top:1px solid var(--line-soft);
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+}
+.post-end .back{
+  font-weight:600;font-size:15px;color:var(--ink-soft);text-decoration:none;
   display:inline-flex;align-items:center;gap:8px;
 }
-.post-item .more .arrow{font-family:var(--font-display);font-size:17px;transition:transform .2s var(--ease);}
-.post-item:hover .more .arrow{transform:translateX(3px);}
+.post-end .back:hover{color:var(--clay-deep);}
+.post-end .back .arrow{font-family:var(--font-display);}
 
 /* footer */
 .foot{background:var(--paper-deep);color:var(--ink-soft);padding:64px 0 40px;}
@@ -288,58 +299,52 @@ section{position:relative;}
   </div>
 </header>
 
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
+<!-- ===================== POST HERO ===================== -->
+<section class="post-hero">
   <div class="shell">
-    <p class="eyebrow">Notes from the practice</p>
-    <h1 class="display">Writing</h1>
-    <p class="lede">Occasional reflections on the body, the work, and what somatic practice is actually like from the inside.</p>
+    <p class="eyebrow"><a href="blog.html" style="color:inherit;text-decoration:none;">Blog</a></p>
+    <h1 class="display">Washing the Dishes</h1>
+    <div class="post-meta">
+      <span>Sean Paul Denny</span>
+      <span class="dot"></span>
+      <span>17 August 2026</span>
+    </div>
   </div>
 </section>
 
 <div class="rule"></div>
 
-<!-- ===================== POSTS ===================== -->
+<!-- ===================== ARTICLE ===================== -->
 <section class="band" style="padding-top:clamp(32px,4vw,52px);">
   <div class="shell">
-    <div class="post-list">
+    <article class="content">
+      <p class="intro">I never liked washing the dishes. My parents tried to bribe my brother and me to do them, and not even wash them, just put them into the dishwasher, and I still wasn't good at it. Potential money on the table, and I let the plates stack up anyway. Plates in the sink were a common thing. Plates stacked next to the sink were a common thing.</p>
 
-      <a class="post-item" href="washing-the-dishes.html">
-        <p class="post-date">17 August 2026</p>
-        <h2>Washing the Dishes</h2>
-        <p class="dek">On learning patience at the kitchen sink: washing the dishes to be present, not to get them done, and a practice you get to keep everywhere else.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>Here's the part that makes me laugh now: I always rinsed them. I didn't want them to be dirty, so I would take the time to rinse them, but I wouldn't wash them until I had no plates left. I cared enough for the half-gesture, just not the whole thing.</p>
 
-      <a class="post-item" href="as-is.html">
-        <p class="post-date">10 August 2026</p>
-        <h2>As Is</h2>
-        <p class="dek">On the parts we build to survive, renegotiating them instead of fighting them, and what it means to be accepted as is.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>The story I told myself was that washing dishes was taking up my precious time. The truth is, that time was going to sitting on the sofa, watching a show, playing a game. The dishes were stealing time from not actually doing anything. And still I would stand there frustrated, in a hurry, wanting it to be done, done, done.</p>
 
-      <a class="post-item" href="the-power-of-and.html">
-        <p class="post-date">2 August 2026</p>
-        <h2>The Power of And</h2>
-        <p class="dek">On emotional capacity: the room you have for what you're actually feeling, and why holding more than one feeling at once changes everything.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>Thich Nhat Hanh writes about washing the dishes to wash the dishes, not to get them done. When I first came across it, I thought, oh yeah, that's neat, and I did not see myself ever doing it. I think that's how these things work. You're made aware of something, and it seeps in, and one day you start thinking about it, and when you start thinking about it, you start making space to do something about it. The information arrives long before the experience does.</p>
 
-      <a class="post-item" href="allow.html">
-        <p class="post-date">27 July 2026</p>
-        <h2>Allow</h2>
-        <p class="dek">A word tattooed on my hand, the games industry, and what it means to hold non-judgmental space for whoever is in front of you.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>I had to work my way there in stages. I used to walk with loud, shouty music. Then I traded the music for audiobooks, using the time more wisely, or more differently I should say. And now I mostly prefer to just walk. Each stage was a little slower than the last. Patience, it turns out, is also something you practice at a pace you can handle.</p>
 
-      <a class="post-item" href="the-box.html">
-        <p class="post-date">21 July 2026</p>
-        <h2>The Box</h2>
-        <p class="dek">For a long time, I couldn't order a coffee. A story about a box, somatic work, and learning that it is okay to take up space.</p>
-        <span class="more">Read the post <span class="arrow">→</span></span>
-      </a>
+      <p>Somewhere in there I remembered a Japanese parable about a samurai who was made a janitor as an act of shame. He didn't accept the shame. He simply became the best possible janitor, because the point was never to be a samurai. The point was to live by his code, and he could do that holding a mop.</p>
 
-    </div>
+      <p>So I started washing the dishes because I'm the one who dirtied them. Responsibility got me to the sink. And if I'm going to clean them, I should do it well. Which, I want to be honest, is also not quite the point. It's not performative. It's not can you do it the best and the fastest. It's can you just be present while you do it.</p>
+
+      <p>That's another stage entirely, finally standing at the sink and realizing I'm no longer in a hurry. I still don't love washing the dishes. It does not fulfill me. But I am content to take the time, to wash them well with warm water, to make them ready to be used again by myself or somebody else. Content, not fulfilled. There's a difference, and the difference is the whole practice.</p>
+
+      <p>There is real humor in it too. Standing there thinking, I can't believe I'm cleaning this thing and I don't hate it. It doesn't suck. That small surprise is worth paying attention to, because it becomes a reflection point for everything else I don't want to do. I catch myself going, oh, I don't want to do that, and then I remember: doing the dishes wasn't really so bad.</p>
+
+      <p>The dishes are a good anchor precisely because they're an everyday thing. We make dishes dirty every day, so every day offers the same small practice: notice the resistance, stand there anyway, let the hurry drain out. There's a satisfaction in cleaning something well, not because anybody's keeping score, but because the thing deserves to be cleaned well.</p>
+
+      <p>The goal is not to clean the dishes. The goal is to be present while cleaning the dishes, and nothing else is required. The work will be done when it's done. And a patience you practice at the sink, every single day, is a patience you get to keep everywhere else.</p>
+
+      <div class="post-end">
+        <a class="back" href="blog.html"><span class="arrow">&larr;</span> All writing</a>
+        <a class="btn btn-clay" href="index.html#book">Get in touch <span class="arrow">&rarr;</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -400,17 +405,6 @@ const setNav = (open) => {
 navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
-
-(function(){
-  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
-  const vh = () => window.innerHeight || document.documentElement.clientHeight;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top > vh() * 0.92) io.observe(el);
-  });
-})();
 </script>
 </body>
 </html>
